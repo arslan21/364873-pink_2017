@@ -33,7 +33,81 @@
       <section class="main-page__intro intro">
         <h1 class="intro__tittle">Конкурс на самое безбашенное путешествие с Пинк</h1>
       </section>
-
+      <section class="main-page__contest contest">
+        <h1 class="contest__tittle">Форма участника конкурса</h1>
+        <header class="contest__header">
+          <p class="contest__header-text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+        </header>
+        <form class="contest__form form" action="index.html" method="post">
+          <div class="form__name">
+            <label class="form__label-text">Фамилия:
+              <input class="form__input-text form__input-text--required" type="text" name="surname" value="" placeholder="Укажите фамилию *" required>
+            </label>
+            <label class="form__label-text" for="surname">Имя:
+              <input class="form__input-text form__input-text--required" type="text" name="name" value="" placeholder="Введите ваше имя *" required>
+            </label>
+            <label class="form__label-text">Отчество:
+              <input class="form__input-text" type="text" name="father-name" value="" placeholder="Ну и отчество тоже">
+            </label>
+          </div>
+          <div class="form__achievements">
+            <span class="form__text">Ваши безбашенные достижения в путешествии</span>
+            <label class="form__label-checkbox">
+              <input class="form__input-checkbox form__input-checkbox--checked" type="checkbox" name="achivments" value="" checked>
+              Сделал селфи с акулой
+            </label>
+            <label class="form__label-checkbox">
+              <input class="form__input-checkbox form__input-checkbox--checked" type="checkbox" name="achivments" value="" checked>
+              Обгорел на пляже
+            </label>
+            <label class="form__label-checkbox">
+              <input class="form__input-checkbox" type="checkbox" name="achivments" value="">
+              Видел Чака Норриса
+            </label>
+            <label class="form__label-checkbox">
+              <input class="form__input-checkbox" type="checkbox" name="achivments" value="">
+              Накупил сувениров
+            </label>
+            <label class="form__label-checkbox">
+              <input class="form__input-checkbox form__input-checkbox--checked" type="checkbox" name="achivments" value="" checked>
+              Удержал башню
+            </label>
+            <label class="form__label-checkbox">
+              <input class="form__input-checkbox" type="checkbox" name="achivments" value="">
+              Разгромил отель
+            </label>
+          </div>
+          <div class="form__contacts">
+            <label class="form__label-text">Номер телефона
+              <input class="form__input-text" type="text" name="phone" value="" placeholder="Номер, пожалуйста">
+            </label>
+            <label class="form__label-text">Адрес почты
+              <input class="form__input-text form__input-text--required" type="text" name="email" value="" placeholder="Введите почту *" required>
+            </label>
+          </div>
+          <div class="form__your-app">
+            <span class="form__text">С каким приложением путешествовали?</span>
+            <label class="form__label-radio">
+              <input class="form__input-radio form__input-radio" type="radio" name="your-app" value="" checked>
+              Pink для iOS
+            </label>
+            <label class="form__label-radio">
+              <input class="form__input-radio" type="radio" name="your-app" value="">
+              Pink на Android
+            </label>
+            <label class="form__label-radio">
+              <input class="form__input-radio" type="radio" name="your-app" value="">
+              Windows Phone
+            </label>
+          </div>
+          <div class="form__description">
+            <span class="form__text">Опишите свои эмоции</span>
+            <textarea name="description" rows="8" cols="20" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          </div>
+          <button class="form__button " type="button" name="form-send">Отправить форму</button>
+          <small class="form__small">* — обязательные поля</small>
+        </form>
+      </section>
     </main>
     <footer class="page-footer">
       <a href="#" class="page-footer__logo">
@@ -63,5 +137,6 @@
         </a>
       </div>
     </footer>
+
   </body>
 </html>
