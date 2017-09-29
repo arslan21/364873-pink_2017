@@ -3,6 +3,5 @@
 }
 
 .information__text {
-  @include slogan-size;
-  color: $font-color;
+  @include font($font-size-big, 18px, 300, $main-font-color);
 }

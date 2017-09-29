@@ -1,7 +1,14 @@
-$font-color: #283645;
-$font-size: 14px;
+$main-font-color: #283645;
+$contrast-font-color: #ffffff;
+$contacts-font-color: #d22856;
+$name-font-color: #000000;
+
+$font-size-normal: 14px;
+$font-size-little: $font-size-normal - 2px;
+$font-size-medium: $font-size-normal + 4px;
+$font-size-big: $font-size-normal + 10px;
+
 $menu-main-color: #283446;
-$menu-font-color: white;
 
 @mixin visualy-hidden {
   position: absolute;
@@ -23,16 +30,24 @@ $menu-font-color: white;
 
 @mixin link-decoration {
   text-decoration: none;
+  color: inherit;
 }
 
-@mixin menu-font-size {
-  font-size: $font-size + 4px;
-  font-weight: 700;
-  color: $menu-font-color;
+@mixin font($font-size: $font-size-normal, $line-height: $font-size * 1.2, $font-weight: 400, $font-color: $main-font-color) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  color: $font-color;
 }
 
-@mixin slogan-size {
-  font-size: $font-size+10px;
-  font-weight: 300;
-  color: $menu-font-color;
-}
+// @mixin menu-font-size {
+//   font-size: $font-size + 4px;
+//   font-weight: 700;
+//   color: $menu-font-color;
+// }
+//
+// @mixin slogan-size {
+//   font-size: $font-size+10px;
+//   font-weight: 300;
+//   color: $menu-font-color;
+// }

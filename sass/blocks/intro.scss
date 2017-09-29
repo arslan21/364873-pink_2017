@@ -4,7 +4,8 @@
 }
 
 .intro__tittle {
-  @include slogan-size;
+  @include font($font-size-big, 24px, 300, $contrast-font-color);
+
 }
 
 .intro__tittle--main {
