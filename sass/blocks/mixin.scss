@@ -8,7 +8,10 @@ $font-size-little: $font-size-normal - 2px;
 $font-size-medium: $font-size-normal + 4px;
 $font-size-big: $font-size-normal + 10px;
 
+$page-color: #ffffff;
 $menu-main-color: #283446;
+$card-color: #f2f2f2;
+
 
 @mixin visualy-hidden {
   position: absolute;
