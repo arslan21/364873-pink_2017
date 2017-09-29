@@ -1,0 +1,8 @@
+.information__tittle {
+  @include visualy-hidden;
+}
+
+.information__text {
+  @include slogan-size;
+  color: $font-color;
+}

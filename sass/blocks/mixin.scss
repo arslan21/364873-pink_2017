@@ -26,13 +26,13 @@ $menu-font-color: white;
 }
 
 @mixin menu-font-size {
-  font-size: calc($font-size + 4px);
+  font-size: $font-size + 4px;
   font-weight: 700;
   color: $menu-font-color;
 }
 
 @mixin slogan-size {
-  font-size: calc($font-size + 24px);
+  font-size: $font-size+10px;
   font-weight: 300;
   color: $menu-font-color;
 }
