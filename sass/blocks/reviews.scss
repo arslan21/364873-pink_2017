@@ -1,0 +1,12 @@
+.reviews__tittle {
+  @include visualy-hidden;
+}
+
+.reviews__list {
+  @include list-style-none;
+}
+
+.reviews__quote {
+  margin: 0;
+  padding: 0;
+}
