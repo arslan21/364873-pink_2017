@@ -1,7 +1,18 @@
+.information {
+  background-color: $card-color;
+}
+
 .information__tittle {
   @include visualy-hidden;
 }
 
+.information__question {
+  background-color: $page-color;
+}
+
 .information__text {
   @include font($font-size-big, 18px, 300, $main-font-color);
+}
+
+.information__image {
 }
