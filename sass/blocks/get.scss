@@ -1,0 +1,20 @@
+.get {
+  background-color: #1d2531;
+}
+
+.get__tittle {
+  @include visualy-hidden;
+}
+
+.get__button {
+  @include  link-decoration;
+  @include menu-font-size;
+}
+
+.get__platform {
+
+}
+
+.get__text {
+  color: $menu-font-color;
+}

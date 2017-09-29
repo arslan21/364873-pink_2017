@@ -1,11 +1,10 @@
-$font-color: #283645;
-$font-size: 14px;
-$menu-main-color: #283446;
-$menu-font-color: white;
-$munu-font-size: 18px;
 
 @import "blocks/mixin.scss";
 @import "blocks/main-styles.scss";
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
 @import "blocks/site-list.scss";
+// @import "blocks/main-page.scss";
+@import "blocks/intro.scss";
+@import "blocks/get.scss";
+@import "blocks/platform.scss";

@@ -1,0 +1,16 @@
+.intro {
+  background-image: url("../../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+}
+
+.intro__tittle {
+  @include slogan-size;
+}
+
+.intro__tittle--main {
+  @include visualy-hidden;
+}
+
+.intro__slogan {
+  display: none
+}

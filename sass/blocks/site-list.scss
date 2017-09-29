@@ -1,6 +1,6 @@
 .site-list {
+  @include menu-font-size;
   text-transform: uppercase;
-  font-size: $munu-font-size;
   line-height: 32px;
   font-weight: bold;
 }
