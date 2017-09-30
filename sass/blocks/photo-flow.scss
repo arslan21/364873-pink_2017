@@ -13,6 +13,8 @@
 
 .photo-flow__list {
   @include list-style-none;
+  @include zero-indent;
+
 }
 
 .photo-flow__item {
