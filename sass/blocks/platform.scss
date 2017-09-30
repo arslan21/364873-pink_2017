@@ -1,3 +1,9 @@
+.platform {
+  @include zero-indent;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
 .platform__item {
   @include list-style-none;
   @include size(56px, 56px);

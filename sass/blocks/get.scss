@@ -1,5 +1,6 @@
 .get {
   background-color: #1d2531;
+  padding-top: 28px;
 }
 
 .get__tittle {
@@ -17,5 +18,6 @@
 }
 
 .get__text {
-  @include font($font-size-medium, 24px, 300, $contrast-font-color);
+  @include font($font-size-normal, 24px, 300, $contrast-font-color);
+  padding-bottom: 32px;
 }
