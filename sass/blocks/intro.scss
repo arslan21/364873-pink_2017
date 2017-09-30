@@ -1,6 +1,8 @@
 .intro {
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
+  // background-position: 50% 50%;
+  @include size(100%, 462px);
 }
 
 .intro__tittle {
@@ -12,4 +14,10 @@
 
 .intro__slogan {
   display: none
+}
+
+.intro__image {
+  margin-top: 176px;
+  margin-left: 0px;
+  // margin-bottom: 0;
 }
