@@ -4,8 +4,7 @@
 
 .design__link {
   display: block;
-  width: 27px;
-  height: 34px;
+  @include size(27px, 34px);
   background-repeat: no-repeat;
   background-image: url("../img/logo-htmlacademy.svg");
   & p {
