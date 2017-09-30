@@ -5,11 +5,9 @@
 
 .intro__tittle {
   @include font($font-size-big, 24px, 300, $contrast-font-color);
-
-}
-
-.intro__tittle--main {
-  @include visualy-hidden;
+  &--main {
+    .visualy-hidden {};
+  }
 }
 
 .intro__slogan {

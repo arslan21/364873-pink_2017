@@ -16,5 +16,5 @@
 
 .popup__button {
   display: block;
-  @include link-decoration;
+  .link-decoration {};
 }

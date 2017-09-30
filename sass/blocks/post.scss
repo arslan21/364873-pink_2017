@@ -3,7 +3,7 @@
 }
 
 .post__review {
-  @include zero-indent;
+  .zero-indent {};
 }
 
 .post__author {
@@ -20,5 +20,4 @@
 }
 
 .post__likes {
-
 }

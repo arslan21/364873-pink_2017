@@ -8,6 +8,6 @@
   background-repeat: no-repeat;
   background-image: url("../img/logo-htmlacademy.svg");
   & p {
-    @include visualy-hidden;
+    .visualy-hidden {};
   }
 }

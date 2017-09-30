@@ -3,11 +3,11 @@
 }
 
 .get__tittle {
-  @include visualy-hidden;
+  .visualy-hidden {};
 }
 
 .get__button {
-  @include  link-decoration;
+  .link-decoration {};
   @include font($font-size-medium, 18px, 700, $contrast-font-color);
 }
 

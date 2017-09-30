@@ -1,6 +1,10 @@
 .tariff {
   text-transform: uppercase;
-  @include list-style-none;
+  .list-style-none {};
+  &--hit {
+    background-image: url("../img/bg-hit.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 .tariff__name {
@@ -15,23 +19,16 @@
   @include font($font-size-normal, 30px, 400, $main-font-color);
 }
 
-.tariff--hit {
-  background-image: url("../img/bg-hit.svg");
-  background-repeat: no-repeat;
-}
 
 .tariff__exist {
   display: block;
   @include size(27px, 27px);
   width: 27px;
-}
-
-.tariff__exist--true {
-  background-image: url("../img/icon-yes.svg");
   background-repeat: no-repeat;
-}
-
-.tariff__exist--false {
-  background-image: url("../img/icon-no.svg");
-  background-repeat: no-repeat;
+  &--true {
+    background-image: url("../img/icon-yes.svg");
+  }
+  &--false {
+    background-image: url("../img/icon-no.svg");
+  }
 }
