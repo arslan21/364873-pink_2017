@@ -1,0 +1,22 @@
+.upload {
+  background-color: $card-color;
+}
+
+.upload__tittle {
+  @include visualy-hidden;
+}
+
+.upload-image {
+  display: block;
+  @include size(100%, 374px);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-image: url("../img/photo-road-mobile@1x.jpg");
+  & p {
+    @include visualy-hidden;
+  }
+}
+
+.upload__button {
+  @include font($font-size-normal, 18px, 700, $contct-font-color);
+}
