@@ -1,3 +1,7 @@
+.reviews {
+  padding-top: 50px;
+}
+
 .reviews__tittle {
   @include visualy-hidden;
 }
@@ -8,4 +12,8 @@
 
 .reviews__quote {
   @include zero-indent;
+}
+
+.reviews__toggles {
+  margin-top: 45px;
 }

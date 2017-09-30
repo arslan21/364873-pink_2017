@@ -1,5 +1,5 @@
 .information {
-  background-color: $card-color;
+  padding-top: 46px;
 }
 
 .information__tittle {
@@ -7,12 +7,16 @@
 }
 
 .information__question {
-  background-color: $page-color;
+  // background-color: $page-color;
 }
 
 .information__text {
   @include font($font-size-big, 18px, 300, $main-font-color);
 }
 
-.information__image {
+.information__list,
+.information__image-background {
+  background-color: $card-color;
+  margin-top: 0;
+  margin-bottom: 0;
 }
