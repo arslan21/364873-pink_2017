@@ -1,0 +1,7 @@
+.price {
+  background-color: $card-color;
+}
+
+.price__tittle {
+  @include visualy-hidden;
+}
