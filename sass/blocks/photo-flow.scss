@@ -3,7 +3,7 @@
 }
 
 .photo-flow__tittle {
-  .visualy-hidden {};
+  @include visualy-hidden;
 }
 
 .photo-flow__header-text,
@@ -12,9 +12,9 @@
 }
 
 .photo-flow__list {
-  .list-style-none {};
+  @include list-style-none;
 }
 
 .photo-flow__item {
-  .zero-indent {};
+  @include zero-indent;
 }

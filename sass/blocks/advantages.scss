@@ -1,5 +1,5 @@
 .advantages {
-  .list-style-none {};
+  @include list-style-none;
   background-color: $card-color;
 }
 

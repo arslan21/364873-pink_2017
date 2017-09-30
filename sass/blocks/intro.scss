@@ -6,7 +6,7 @@
 .intro__tittle {
   @include font($font-size-big, 24px, 300, $contrast-font-color);
   &--main {
-    .visualy-hidden {};
+    @include visualy-hidden;
   }
 }
 

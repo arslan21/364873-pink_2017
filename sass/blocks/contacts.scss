@@ -1,5 +1,5 @@
 .contacts__tittle {
-  .visualy-hidden {};
+  @include visualy-hidden;
 }
 
 .contacts__text {

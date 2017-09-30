@@ -3,7 +3,7 @@
 }
 
 .information__tittle {
-  .visualy-hidden {};
+  @include visualy-hidden;
 }
 
 .information__question {

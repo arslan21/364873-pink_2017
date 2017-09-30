@@ -1,5 +1,5 @@
 .platform__item {
-  .list-style-none {};
+  @include list-style-none;
   @include size(56px, 56px);
   background-repeat: no-repeat;
 }
@@ -22,6 +22,6 @@
     background-image: url("../img/logo-microsoft.svg");
   }
   & p {
-    .visualy-hidden {};
+    @include visualy-hidden;
   }
 }

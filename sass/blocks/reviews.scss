@@ -1,11 +1,11 @@
 .reviews__tittle {
-  .visualy-hidden {};
+  @include visualy-hidden;
 }
 
 .reviews__list {
-  .list-style-none {};
+  @include list-style-none;
 }
 
 .reviews__quote {
-  .zero-indent {};
+  @include zero-indent;
 }

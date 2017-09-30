@@ -3,5 +3,5 @@
 }
 
 .page-header__toggle {
-  .visualy-hidden {};
+  @include visualy-hidden;
 }

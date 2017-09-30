@@ -3,7 +3,7 @@
 }
 
 .upload__tittle {
-  .visualy-hidden {};
+  @include visualy-hidden;
 }
 
 .upload-image {
@@ -13,7 +13,7 @@
   background-size: auto;
   background-image: url("../img/photo-road-mobile@1x.jpg");
   & p {
-    .visualy-hidden {};
+    @include visualy-hidden;
   }
 }
 

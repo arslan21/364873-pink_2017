@@ -1,6 +1,6 @@
 .tariff {
   text-transform: uppercase;
-  .list-style-none {};
+  @include list-style-none;
   &--hit {
     background-image: url("../img/bg-hit.svg");
     background-repeat: no-repeat;
