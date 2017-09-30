@@ -1,5 +1,4 @@
 .site-list {
-  @include font($font-size-medium, 32px, 700, $contrast-font-color);
   text-transform: uppercase;
   margin: 0;
   padding: 0;
@@ -12,5 +11,6 @@
 }
 
 .site-list__item a {
+  @include font($font-size-medium, 32px, 700, $contrast-font-color);
   @include link-decoration;
 }
