@@ -38,7 +38,7 @@ $card-color: #f2f2f2;
 
 @mixin link-decoration {
   text-decoration: none;
-  color: inherit;
+  // color: inherit;
 }
 
 @mixin font($font-size: $font-size-normal, $line-height: $font-size * 1.2, $font-weight: 400, $font-color: $main-font-color) {
