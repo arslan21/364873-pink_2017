@@ -6,7 +6,7 @@
   @include visualy-hidden;
 }
 
-.photo-flow__header-text.
+.photo-flow__header-text,
 .photo-flow__footer-text {
   @include font($font-size-normal, 30px, 400, $main-font-color);
 }
