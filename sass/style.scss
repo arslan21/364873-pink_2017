@@ -5,7 +5,8 @@
 @import "blocks/main-nav.scss";
 @import "blocks/site-list.scss";
 @import "blocks/main-page.scss";
-@import "blocks/intro.scss";
+@import "blocks/all-buttons.scss";
+
 @import "blocks/get.scss";
 @import "blocks/platform.scss";
 @import "blocks/information.scss";
@@ -23,6 +24,10 @@
 @import "blocks/upload.scss";
 @import "blocks/editor.scss";
 
+@import "blocks/contest.scss";
+@import "blocks/form.scss";
+
+@import "blocks/intro.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/social.scss";
 @import "blocks/design.scss";
