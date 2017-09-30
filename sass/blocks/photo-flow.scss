@@ -11,12 +11,24 @@
   @include font($font-size-normal, 30px, 400, $main-font-color);
 }
 
+.photo-flow__header {
+  margin-top: 54px;
+}
+
+.photo-flow__footer {
+  margin-top: 30px;
+  margin-bottom: 48px
+}
+
 .photo-flow__list {
   @include list-style-none;
   @include zero-indent;
-
+  padding-top: 56px;
 }
 
 .photo-flow__item {
   @include zero-indent;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
