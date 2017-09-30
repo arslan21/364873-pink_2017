@@ -1,0 +1,29 @@
+.social {
+  @include list-style-none;
+}
+
+.social__item {
+}
+
+.social__social-button {
+  display: block;
+  border: 3px solid $card-color;
+  border-radius: 50%;
+  height: 51px;
+  width: 51px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  &--twitter {
+    background-image: url("../img/icon-twitter.svg");
+  }
+  &--facebook {
+    background-image: url("../img/icon-facebook.svg");
+  }
+  &--youtube {
+    background-image: url("../img/icon-youtube.svg");
+  }
+}
+
+.social__text {
+  @include visualy-hidden;
+}
