@@ -10,3 +10,11 @@
 .photo-flow__footer-text {
   @include font($font-size-normal, 30px, 400, $main-font-color);
 }
+
+.photo-flow__list {
+  @include list-style-none;
+}
+
+.photo-flow__item {
+  @include zero-indent;
+}
