@@ -1,3 +1,7 @@
+.contest {
+  padding-top: 54px;
+}
+
 .contest__tittle {
   @include visualy-hidden;
 }
@@ -7,5 +11,5 @@
 }
 
 .cotnest__form {
-
+  // padding-top: 49px;
 }

@@ -1,3 +1,43 @@
+.form,
+.form>* {
+  display: flex;
+  flex-direction: column;
+}
+
+.form>* {
+  padding-top: 10px;
+}
+
+.form__name>*,
+// .form__achievements>*,
+.form__contacts>*
+// .form__your-app>*,
+// .form__description>*
+{
+  padding-top: 28px;
+}
+
+.form__achievements>*,
+.form__your-app>* {
+  padding-top: 50px;
+}
+
+.form__name,
+.form__achievements,
+.form__contacts,
+.form__your-app,
+.form__description {
+  padding-bottom: 44px;
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+.form-button {
+  margin-left: 22px;
+  margin-right: 22px;
+}
+
+
 .form__label-text {
   @include font($font-size-normal, 30px, 400, $contacts-font-color);
   text-transform: uppercase;
