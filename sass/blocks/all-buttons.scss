@@ -3,10 +3,13 @@
   text-transform: uppercase;
   border: 2px solid $form-button-color;
   background-color: $form-button-color;
+  text-align: center;
+
 }
 
 .round-button {
   display: block;
+  margin: auto;
   @include size(281px, 55px);
   background-color: transparent;
   border: 3px solid $contacts-font-color;

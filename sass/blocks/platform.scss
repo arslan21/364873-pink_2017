@@ -2,9 +2,10 @@
   @include zero-indent;
   margin-top: 32px;
   margin-bottom: 32px;
-  display: flex;
   padding-left: 38px;
   padding-right: 38px;
+  display: flex;
+  justify-content: center;
 }
 
 .platform__item {
