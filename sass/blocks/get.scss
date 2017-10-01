@@ -1,6 +1,8 @@
 .get {
   background-color: #1d2531;
   padding-top: 28px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .get__tittle {
@@ -11,6 +13,7 @@
   @include link-decoration;
   @include font($font-size-medium, 18px, 700, $contrast-font-color);
   border-color: $contrast-font-color;
+
 }
 
 .get__platform {

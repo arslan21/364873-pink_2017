@@ -2,10 +2,11 @@
   background-image:
     url("../img/bg-back-mobile@1x.jpg"),;
   background-repeat: no-repeat;
-  // background-position: 50% 50%;
+  background-position: 50% 50%;
   @include size(100%, 462px);
   padding-top: 101px;
   position: relative;
+  text-align: center;
 }
 
 .intro__tittle {

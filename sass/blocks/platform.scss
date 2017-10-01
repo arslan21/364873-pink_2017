@@ -2,15 +2,15 @@
   @include zero-indent;
   margin-top: 32px;
   margin-bottom: 32px;
+  display: flex;
+  padding-left: 38px;
+  padding-right: 38px;
 }
 
 .platform__item {
   @include list-style-none;
   @include size(56px, 56px);
   background-repeat: no-repeat;
-}
-
-.platform__link {
 }
 
 .platform__link {

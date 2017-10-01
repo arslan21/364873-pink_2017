@@ -32,11 +32,6 @@
   padding-right: 22px;
 }
 
-.form-button {
-  margin-left: 22px;
-  margin-right: 22px;
-}
-
 
 .form__label-text {
   @include font($font-size-normal, 30px, 400, $contacts-font-color);
