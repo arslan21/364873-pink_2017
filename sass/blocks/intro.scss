@@ -1,0 +1,27 @@
+.intro {
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  @include size(100%, 462px);
+  padding-top: 101px;
+  position: relative;
+  text-align: center;
+}
+
+.intro__tittle {
+  @include font($font-size-big, 24px, 300, $contrast-font-color);
+
+  &--main {
+    @include visualy-hidden;
+  }
+}
+
+.intro__slogan {
+  display: none;
+}
+
+.intro__image {
+  position: absolute;
+  bottom: 0;
+}

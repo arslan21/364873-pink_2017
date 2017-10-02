@@ -1,0 +1,24 @@
+.information {
+  margin-bottom: 50px;
+}
+
+.information__tittle {
+  @include visualy-hidden;
+}
+
+.information__question {
+  // background-color: $page-color;
+}
+
+.information__text {
+  display: block;
+
+  @include font($font-size-big, 18px, 300, $main-font-color);
+}
+
+.information__list,
+.information__image-background {
+  background-color: $card-color;
+  margin-top: 0;
+  margin-bottom: 0;
+}

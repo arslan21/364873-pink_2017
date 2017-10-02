@@ -3,20 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк - Фоографии</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body class="body">
     <header class="page-header">
-      <a href="#" class="page-header__logo">
-        <img class="page-header__logo-image" src="img/main-page-logo.jpeg" alt="Pink">
+      <a href="index.html" class="page-header__logo">
+        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Pink">
       </a>
+      <button class="page-header__toggle" type="button" name="button">Расскрыть меню</button>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button" name="button">Расскрыть меню</button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a href="index.html">Главная</a>
             </li>
-            <li class="site-list__item site-list__item--active">
+            <li class="site-list__item  site-list__item--active">
               <a href="photo.html">Фотографии</a>
             </li>
             <li class="site-list__item">
@@ -44,7 +45,7 @@
               <img class="post__image" src="#" alt="Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!">
             </a>
             <blockquote class="post__review">
-              <cite class="post__autor">Анна</cite>
+              <cite class="post__author">Анна</cite>
               <span class="post__time">(5 минут назад)</span>
               <p class="post__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
             </blockquote>
@@ -58,7 +59,7 @@
               <img class="post__image" src="#" alt="Вчера он на луну летал, сегодня в руки к нам попал.">
             </a>
             <blockquote class="post__review">
-              <cite class="post__autor">Левон</cite>
+              <cite class="post__author">Левон</cite>
               <span class="post__time">(5 часов назад)</span>
               <p class="post__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
             </blockquote>
@@ -72,7 +73,7 @@
               <img class="post__image" src="#" alt="Соседи будут рады!">
             </a>
             <blockquote class="post__review">
-              <cite class="post__autor">Антон</cite>
+              <cite class="post__author">Антон</cite>
               <span class="post__time">(12 часов назад)</span>
               <p class="post__text">Соседи будут рады!</p>
             </blockquote>
@@ -86,7 +87,7 @@
               <img class="post__image" src="#" alt="Здесь могла быть ваша цитата о высоком и вечном.">
             </a>
             <blockquote class="post__review">
-              <cite class="post__autor">Борис</cite>
+              <cite class="post__author">Борис</cite>
               <span class="post__time">(20 часов назад)</span>
               <p class="post__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
             </blockquote>
@@ -100,7 +101,7 @@
               <img class="post__image" src="#" alt="Самая кубанская в мире!">
             </a>
             <blockquote class="post__review">
-              <cite class="post__autor">Сергей</cite>
+              <cite class="post__author">Сергей</cite>
               <span class="post__time">(25 часов назад)</span>
               <p class="post__text">Самая кубанская в мире!</p>
             </blockquote>
@@ -114,7 +115,7 @@
               <img class="post__image" src="#" alt="Где снег-то?">
             </a>
             <blockquote class="post__review">
-              <cite class="post__autor">Максим</cite>
+              <cite class="post__author">Максим</cite>
               <span class="post__time">(40 часов назад)</span>
               <p class="post__text">Где снег-то?</p>
             </blockquote>
@@ -128,7 +129,7 @@
               <img class="post__image" src="#" alt="Всем GM и взаимные лайки!">
             </a>
             <blockquote class="post__review">
-              <cite class="post__autor">Надежда</cite>
+              <cite class="post__author">Надежда</cite>
               <span class="post__time">(45 часов назад)</span>
               <p class="post__text">Всем GM и взаимные лайки!</p>
             </blockquote>
@@ -145,8 +146,10 @@
       <section class="main-page__upload upload">
         <h1 class="upload__tittle">Загрузите свои фотографии</h1>
         <div class="upload__wrapper">
-          <form= class="upload__editor editor" action="https://echo.htmlacademy.ru" method="post">
-            <input type="image" src="#">
+          <form class="upload__editor editor" action="https://echo.htmlacademy.ru" method="post">
+            <div class="upload-image">
+              <p>Загрузите изображение</p>
+            </div>
             <div class="editor__list">
               <span class="editor__item editor__item--corp editor__item--active">
                 <input class="editor__slider editor__slider--active" type="range" name="corp" value="">
@@ -158,37 +161,37 @@
                 <input class="editor__slider" type="range" name="contrast" value="">
               </span>
             </div>
-            <button class="upload__button button" type="button" name="upload__post">Запостить</button>
-            <button class="upload__button button button-disabled" type="button" name="upload__reset">Отмена</button>
+            <button class="upload__button round-button" type="button" name="upload__post">Запостить</button>
+            <button class="upload__button round-button round-button-disabled" type="button" name="upload__reset">Отмена</button>
           </form>
         </div>
       </section>
     </main>
     <footer class="page-footer">
       <a href="#" class="page-footer__logo">
-        <img class="page-footer__logo-image" src="img/page-footer__logo-image.jpeg" alt="Pink">
+        <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" alt="Pink">
       </a>
-      <ul class="pagr-footer__social social">
-        <li class="social__social-button">
-          <a class="social__social-button--twitter" href="#">
-            <p class="visuali-hidden">Twitter</p>
+      <ul class="page-footer__social social">
+        <li class="social__item">
+          <a class="social__social-button social__social-button--twitter" href="#">
+            <p class="social__text">Twitter</p>
           </a>
         </li>
-        <li class="social__social-button">
-          <a class="social__social-button--facebook" href="#">
-            <p class="visuali-hidden">Facebook</p>
+        <li class="social__item">
+          <a class="social__social-button social__social-button--facebook" href="#">
+            <p class="social__text">Facebook</p>
           </a>
         </li>
-        <li class="social__social-button">
-          <a class="social__social-button--youtube" href="#">
-            <p class="visuali-hidden">YouTube</p>
+        <li class="social__item">
+          <a class="social__social-button social__social-button--youtube" href="#">
+            <p class="social__text">YouTube</p>
           </a>
         </li>
       </ul>
       <div class="page-footer__design design">
         <span class="design__text">Разработано</span>
         <a class="design__link" href="#">
-          <img src="#" alt="HTML Academy">
+          <p>HTML Academy</p>
         </a>
       </div>
     </footer>

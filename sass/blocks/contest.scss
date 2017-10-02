@@ -1,0 +1,15 @@
+.contest {
+  padding-top: 54px;
+}
+
+.contest__tittle {
+  @include visualy-hidden;
+}
+
+.contest__header-text {
+  @include font($font-size-normal, 30px, 400, $main-font-color);
+}
+
+.cotnest__form {
+  // padding-top: 49px;
+}

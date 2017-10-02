@@ -1,0 +1,23 @@
+.post {
+  background-color: $card-color;
+}
+
+.post__review {
+  @include zero-indent;
+}
+
+.post__author {
+  @include font($font-size-normal, 24px, 700, $main-font-color);
+  font-style: normal;
+}
+
+.post__time {
+  @include font($font-size-little, 24px, 300, $main-font-color);
+}
+
+.post__text {
+  @include font($font-size-normal, 24px, 400, $main-font-color);
+}
+
+//.post__likes {
+//}

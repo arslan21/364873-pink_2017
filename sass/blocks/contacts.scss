@@ -1,0 +1,33 @@
+//.contacts {
+//}
+
+.contacts__tittle {
+  @include visualy-hidden;
+}
+
+.contacts__text {
+  @include font($font-size-big, 30px, 300, $main-font-color);
+}
+
+.contacts__adress {
+  display: block;
+  margin-top: 18px;
+}
+
+.adress__phone,
+.adress__mail,
+.adress__post {
+  margin-top: 27px;
+}
+
+.adress__type {
+  display: block;
+
+  @include font($font-size-medium, 30px, 700, $name-font-color);
+}
+
+.adress__adress {
+  margin-top: 10px;
+
+  @include font($font-size-big, 30px, 300, $contacts-font-color);
+}

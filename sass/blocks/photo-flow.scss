@@ -1,0 +1,34 @@
+.photo-flow {
+  background-color: inherit;
+}
+
+.photo-flow__tittle {
+  @include visualy-hidden;
+}
+
+.photo-flow__header-text,
+.photo-flow__footer-text {
+  @include font($font-size-normal, 30px, 400, $main-font-color);
+}
+
+.photo-flow__header {
+  margin: 55px auto;
+  // margin-bottom: 56px
+}
+
+.photo-flow__footer {
+  margin-bottom: 48px;
+}
+
+.photo-flow__list {
+  @include list-style-none;
+  @include zero-indent;
+  margin-bottom: 30px;
+}
+
+.photo-flow__item {
+  @include zero-indent;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,14 @@
+.likes {
+  display: inline-block;
+
+  @include font($font-size-little, 24px, 400, $contacts-font-color);
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+    display: inline-block;
+
+    @include size(13px, 12px);
+    background-image: url("../img/icon-heart.svg");
+  }
+}

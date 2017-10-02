@@ -1,0 +1,70 @@
+$main-font-color: #283645;
+$contrast-font-color: #ffffff;
+$contacts-font-color: #d22856;
+$name-font-color: #000000;
+$form-button-color: #2aab6d;
+
+$font-size-normal: 14px;
+$font-size-little: $font-size-normal - 2px;
+$font-size-medium: $font-size-normal + 4px;
+$font-size-big: $font-size-normal + 10px;
+
+$page-color: #ffffff;
+$menu-main-color: #283446;
+$card-color: #f2f2f2;
+
+
+@mixin visualy-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+@mixin zero-indent {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin list-style-none {
+  @include zero-indent;
+  list-style: none;
+}
+
+
+@mixin link-decoration {
+  text-decoration: none;
+}
+
+@mixin font($font-size: $font-size-normal, $line-height: $font-size * 1.2, $font-weight: 400, $font-color: $main-font-color) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  color: $font-color;
+}
+
+@mixin size ($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin min-size ($width, $min-height) {
+  width: $width;
+  min-height: $min-height;
+}
+
+// @mixin menu-font-size {
+//   font-size: $font-size + 4px;
+//   font-weight: 700;
+//   color: $menu-font-color;
+// }
+//
+// @mixin slogan-size {
+//   font-size: $font-size+10px;
+//   font-weight: 300;
+//   color: $menu-font-color;
+// }

@@ -1,0 +1,13 @@
+.advantages {
+  @include list-style-none;
+  background-color: $card-color;
+}
+
+.advantages__tittle {
+  @include font($font-size-medium, 24px, 700, $name-font-color);
+  color: black;
+}
+
+.advantages__description {
+  @include font($font-size-normal, 24px, 400, $main-font-color);
+}

@@ -1,0 +1,26 @@
+.editor__list {
+  display: flex;
+}
+
+.editor__item {
+  display: block;
+
+  @include size(48px, 44px);
+  background-repeat: no-repeat;
+
+  &--corp {
+    background-image: url("../img/icon-editor-crop.svg");
+  }
+
+  &--fill {
+    background-image: url("../img/icon-editor-fill.svg");
+  }
+
+  &--contrast {
+    background-image: url("../img/icon-editor-contrast.svg");
+  }
+}
+
+//.editor__slider {
+//
+//}

@@ -1,0 +1,64 @@
+.form,
+.form > * {
+  display: flex;
+  flex-direction: column;
+}
+
+.form > * {
+  padding-top: 10px;
+}
+
+.form__name > *,
+.form__contacts > * {
+  padding-top: 28px;
+}
+
+.form__achievements > *,
+.form__your-app > * {
+  padding-top: 50px;
+}
+
+.form__name,
+.form__achievements,
+.form__contacts,
+.form__your-app,
+.form__description {
+  padding-bottom: 44px;
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+
+.form__label-text {
+  @include font($font-size-normal, 30px, 400, $contacts-font-color);
+  text-transform: uppercase;
+}
+
+.form__input-text,
+.form__description textarea {
+  @include font($font-size-medium, 30px, 400, $main-font-color);
+}
+
+.form__text {
+  @include font($font-size-normal, 18px, 400, $contacts-font-color);
+  text-transform: uppercase;
+}
+
+.form__label-checkbox,
+.form__label-radio {
+  @include font($font-size-medium, 30px, 400, $main-font-color);
+}
+
+.form__your-app,
+.form__achievements {
+  background-color: $card-color;
+}
+
+.form__small {
+  @include font($font-size-normal, 30px, 400, $main-font-color);
+  text-transform: uppercase;
+
+  span {
+    color: $contacts-font-color;
+  }
+}

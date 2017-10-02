@@ -1,0 +1,39 @@
+.tariff {
+  text-transform: uppercase;
+
+  @include list-style-none;
+
+  &--hit {
+    background-image: url("../img/bg-hit.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.tariff__name {
+  @include font($font-size-medium, 30px, 700, $contrast-font-color);
+}
+
+.tariff__price {
+  @include font($font-size-big, 30px, 300, $contrast-font-color);
+}
+
+.tariff__property {
+  @include font($font-size-normal, 30px, 400, $main-font-color);
+}
+
+
+.tariff__exist {
+  display: block;
+
+  @include size(27px, 27px);
+  width: 27px;
+  background-repeat: no-repeat;
+
+  &--true {
+    background-image: url("../img/icon-yes.svg");
+  }
+
+  &--false {
+    background-image: url("../img/icon-no.svg");
+  }
+}

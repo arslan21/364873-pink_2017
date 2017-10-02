@@ -1,0 +1,12 @@
+//
+//
+//
+//
+.quote__author {
+  @include font($font-size-medium, 30px, 700, $name-font-color);
+  font-style: normal;
+}
+
+.quote__text {
+  @include font($font-size-normal, 30px, 400, $main-font-color);
+}

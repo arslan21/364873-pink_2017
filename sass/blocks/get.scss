@@ -1,0 +1,26 @@
+.get {
+  background-color: #1d2531;
+  padding-top: 28px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 46px;
+}
+
+.get__tittle {
+  @include visualy-hidden;
+}
+
+.get__button {
+  @include link-decoration;
+  @include font($font-size-medium, 18px, 700, $contrast-font-color);
+  border-color: $contrast-font-color;
+}
+
+//.get__platform {
+//
+//}
+
+.get__text {
+  @include font($font-size-normal, 24px, 300, $contrast-font-color);
+}

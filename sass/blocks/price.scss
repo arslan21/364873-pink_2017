@@ -1,0 +1,14 @@
+.price {
+  background-color: $card-color;
+  padding-top: 138px;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+}
+
+.price__tittle {
+  @include visualy-hidden;
+}
+
+.price__toggles {
+  margin-top: 45px;
+}
