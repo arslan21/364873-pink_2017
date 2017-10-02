@@ -5,8 +5,12 @@
 .page-header__logo-image {
   margin-top: 22px;
   margin-bottom: 25px;
+  margin-left: 20px;
 }
 
 .page-header__toggle {
   @include visualy-hidden;
+  margin-right: 20px;
+  margin-top: 22px;
+  margin-bottom: 25px;
 }

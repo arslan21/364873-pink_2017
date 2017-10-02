@@ -1,5 +1,5 @@
 .information {
-  padding-top: 46px;
+  margin-bottom: 50px;
 }
 
 .information__tittle {
@@ -11,6 +11,8 @@
 }
 
 .information__text {
+  display: block;
+
   @include font($font-size-big, 18px, 300, $main-font-color);
 }
 

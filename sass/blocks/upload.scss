@@ -12,6 +12,7 @@
 
 .upload-image {
   display: block;
+  margin: 0 auto;
 
   @include size(100%, 374px);
   background-repeat: no-repeat;

@@ -4,22 +4,26 @@
   border: 2px solid $form-button-color;
   background-color: $form-button-color;
   text-align: center;
+  margin: 0 auto;
 }
 
 .round-button {
   display: block;
   margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 17px;
+  padding-bottom: 17px;
 
-  @include size(281px, 55px);
+  @include min-size(281px, 55px);
   background-color: transparent;
   border: 3px solid $contacts-font-color;
   border-radius: 30px;
+  white-space: pre-wrap;
+  word-break: break-all;
 
   &-disabled {
     border-color: lighten($main-font-color, 70%);
     // border-color: rgba(40, 54, 69, 0.1);
   }
-  padding-top: 17px;
-  padding-left: 40px;
-  padding-right: 40px;
 }
