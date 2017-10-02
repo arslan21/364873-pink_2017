@@ -13,12 +13,11 @@
   @include link-decoration;
   @include font($font-size-medium, 18px, 700, $contrast-font-color);
   border-color: $contrast-font-color;
-
 }
 
-.get__platform {
-
-}
+//.get__platform {
+//
+//}
 
 .get__text {
   @include font($font-size-normal, 24px, 300, $contrast-font-color);

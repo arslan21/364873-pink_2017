@@ -1,29 +1,19 @@
 .html,
 .body {
   font-family: "Open Sans", "Arial", sans-serif;
+
   @include font($font-size-normal, 18px, 300, $main-font-color);
   background-color: #ffffff;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0px auto;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
-*, *::before, *::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 //
 // img {
 //   max-width: 100%;
-// }
-
-// .visually-hidden {
-// 	position: absolute;
-// 	overflow: hidden;
-// 	clip: rect(0 0 0 0);
-// 	height: 1px;
-// 	width: 1px;
-// 	margin: -1px;
-// 	padding: 0;
-// 	border: 0;
 // }

@@ -4,9 +4,11 @@
 
 .design__link {
   display: block;
+
   @include size(27px, 34px);
   background-repeat: no-repeat;
   background-image: url("../img/logo-htmlacademy.svg");
+
   & p {
     @include visualy-hidden;
   }
