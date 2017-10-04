@@ -1,6 +1,13 @@
 .advantages {
   @include list-style-none;
   background-color: $card-color;
+  padding-left: 34px;
+  padding-right: 34px;
+  padding-bottom: 30px;
+}
+
+.advantages__item {
+  @include list-style-none;
 }
 
 .advantages__tittle {

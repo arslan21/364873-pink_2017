@@ -1,6 +1,4 @@
 .information {
-  padding-right: 34px;
-  margin-bottom: 50px;
 }
 
 .information__tittle {
@@ -8,6 +6,8 @@
 }
 
 .information__question {
+  margin-left: 34px;
+  margin-right: 34px;
   // background-color: $page-color;
 }
 
@@ -21,6 +21,4 @@
 .information__list,
 .information__image-background {
   background-color: $card-color;
-  margin-top: 0;
-  margin-bottom: 0;
 }

@@ -12,13 +12,23 @@
 }
 
 .table__header {
-  display: table-header-group;
+  // display: table-header-group;
+  @include min-size (276px, 98px);
   border: 2px solid $main-font-color;
   background-color: $main-font-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .table__cell {
   // display: table-cell;
+  @include min-size (280px, 63px);
   border: 2px solid #e5e5e5;
   background-color: $page-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 23px;
+  padding-right: 13px;
 }
