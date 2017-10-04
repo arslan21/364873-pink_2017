@@ -1,12 +1,16 @@
 .page-footer {
-  padding-top: 50px;
+  padding-top: 40px;
+  padding-left: 34px;
+  padding-right: 34px;
   display: flex;
   flex-direction: column;
 
   > * {
-    margin: auto;
+    margin: 0 auto;
   }
 }
+
+.page-footer__social {}
 
 .page-footer__logo {
   display: block;
@@ -15,8 +19,5 @@
 
 .page-footer__design {
   margin-top: 40px;
-}
-
-.design {
-  display: flex;
+  padding-bottom: 40px;
 }

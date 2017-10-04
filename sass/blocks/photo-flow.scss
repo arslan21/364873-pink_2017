@@ -1,5 +1,11 @@
 .photo-flow {
   background-color: inherit;
+  margin-top: -280px;
+  background-color: $page-color;
+  z-index: 3;
+  padding-left: 38px;
+  padding-right: 38px;
+  padding-top: 54px;
 }
 
 .photo-flow__tittle {
@@ -12,8 +18,7 @@
 }
 
 .photo-flow__header {
-  margin: 55px auto;
-  // margin-bottom: 56px
+  margin-bottom: 56px;
 }
 
 .photo-flow__footer {

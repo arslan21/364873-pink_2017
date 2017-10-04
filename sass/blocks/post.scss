@@ -6,6 +6,14 @@
   @include zero-indent;
 }
 
+.post__likes,
+.post__review {
+  text-align: left;
+  padding-left: 17px;
+}
+
+
+
 .post__author {
   @include font($font-size-normal, 24px, 700, $main-font-color);
   font-style: normal;
@@ -19,5 +27,9 @@
   @include font($font-size-normal, 24px, 400, $main-font-color);
 }
 
+.post__image {
+  @include size (100%, 137px);
+  object-fit: cover;
+}
 //.post__likes {
 //}

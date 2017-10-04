@@ -1,12 +1,15 @@
 .social {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 
   @include list-style-none;
 }
 
-//.social__item {
-//}
+.social__item {
+  margin-left: 9px;
+  margin-left: 9px;
+}
 
 .social__social-button {
   display: block;

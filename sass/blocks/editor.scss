@@ -1,10 +1,10 @@
 .editor__list {
   display: flex;
+  justify-content: space-around;
+  margin-bottom: 76px;
 }
 
 .editor__item {
-  display: block;
-
   @include size(48px, 44px);
   background-repeat: no-repeat;
 
@@ -19,8 +19,34 @@
   &--contrast {
     background-image: url("../img/icon-editor-contrast.svg");
   }
+  position: relative;
 }
 
-//.editor__slider {
-//
-//}
+.editor__slider {
+  @include visualy-hidden;
+}
+
+.editor__item {
+  &::before,
+  &::after {
+    content: "";
+    display: none;
+    position: absolute;
+  }
+  &::before {
+    @include size (240px, 2px);
+    bottom: -34px;
+    background-color: black;
+  }
+  &::after {
+    @include size (14px, 14px);
+    bottom: -40px;
+    background-image: url("../img/icon-editor-diagram-fill.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &--active::before,
+  &--active::after {
+    display: block;
+  }
+}
