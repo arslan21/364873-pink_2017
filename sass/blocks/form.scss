@@ -5,7 +5,7 @@
 }
 
 .form > * {
-  padding-top: 10px;
+  // padding-top: 10px;
 }
 
 .form__name > *,
@@ -15,7 +15,7 @@
 
 .form__achievements > *,
 .form__your-app > * {
-  padding-top: 50px;
+  padding-top: 40px;
 }
 
 .form__name,
@@ -26,22 +26,28 @@
   padding-bottom: 44px;
   padding-left: 22px;
   padding-right: 22px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-
 
 .form__label-text {
   @include font($font-size-normal, 30px, 400, $contacts-font-color);
   text-transform: uppercase;
 }
 
-.form__input-text,
-.form__description textarea {
+.form__input-text {
   @include font($font-size-medium, 30px, 400, $main-font-color);
+  @include size (276px, 59px);
 }
 
 .form__text {
   @include font($font-size-normal, 18px, 400, $contacts-font-color);
   text-transform: uppercase;
+  text-align: center;
+  padding-left: 22px;
+  padding-right: 22px;
 }
 
 .form__label-checkbox,
@@ -54,11 +60,26 @@
   background-color: $card-color;
 }
 
+.form__description {
+  padding-top: 41px;
+}
+
+.form__textarea {
+  @include font($font-size-medium, 30px, 400, $main-font-color);
+  @include size (276px, 197px);
+  margin-top: 19px
+}
+
 .form__small {
   @include font($font-size-normal, 30px, 400, $main-font-color);
   text-transform: uppercase;
+  margin-bottom: 24px;
 
-  span {
-    color: $contacts-font-color;
-  }
+  // span {
+  //   color: $contacts-font-color;
+  // }
+}
+
+.form__button {
+  // margin-bottom: 41px;
 }

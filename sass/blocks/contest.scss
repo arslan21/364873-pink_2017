@@ -1,9 +1,18 @@
 .contest {
-  padding-top: 54px;
+  background-color: inherit;
+  margin-top: -230px;
+  background-color: $page-color;
+  z-index: 3;
+  padding-top: 24px;
 }
 
 .contest__tittle {
   @include visualy-hidden;
+}
+
+.contest__header {
+  padding-left: 22px;
+  padding-right: 22px;
 }
 
 .contest__header-text {
