@@ -18,3 +18,9 @@
 .advantages__description {
   @include font($font-size-normal, 24px, 400, $main-font-color);
 }
+
+@media (min-width: 660px) {
+  .advantages__wrapper {
+    width: 50%;
+  }
+}

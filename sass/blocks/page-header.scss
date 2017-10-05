@@ -1,7 +1,7 @@
 .page-header {
   background-color: $menu-main-color;
-  margin-bottom: -66px;
   z-index: 10;
+  opacity: 0.99
 }
 
 .page-header__logo-image {
@@ -15,4 +15,27 @@
   margin-right: 20px;
   margin-top: 22px;
   margin-bottom: 25px;
+}
+
+@media (min-width: 660px) {
+  .page-header__logo {
+    display: block;
+    position: relative;
+    height: 109px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 20px;
+      top: 27px;
+      @include size (147px, 40px);
+      background-image: url("../img/logo-pink-blue-mobile.svg");
+      background-repeat: no-repeat;
+      // background-position: center;
+    }
+  }
+  .page-header__logo-image {
+    // display: none;
+    @include visualy-hidden;
+
+    }
 }

@@ -1,4 +1,4 @@
-.html,
+html,
 .body {
   font-family: "Open Sans", "Arial", sans-serif;
 
@@ -14,21 +14,20 @@
   box-sizing: inherit;
 }
 
+html,
 .body {
   width: 320px;
 }
 
 @media (min-width: 660px) {
+  html,
   .body {
     width: 660px;
   }
 }
 @media (min-width: 1200px) {
+  html,
   .body {
-    width: 1200px;
+    width: 960px;
   }
 }
-//
-// img {
-//   max-width: 100%;
-// }

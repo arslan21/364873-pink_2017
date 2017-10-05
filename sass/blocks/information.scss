@@ -1,24 +1,26 @@
 .information {
+  background-color: $card-color;
+
 }
 
 .information__tittle {
   @include visualy-hidden;
 }
 
-.information__question {
-  margin-left: 34px;
-  margin-right: 34px;
-  // background-color: $page-color;
-}
-
-.information__text {
-  display: block;
-  padding-bottom: 30px;
-
-  @include font($font-size-big, 24px, 300, $main-font-color);
-}
-
 .information__list,
-.information__image-background {
-  background-color: $card-color;
+.information__image {
+}
+
+@media (min-width: 660px) {
+  .information {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  .information__image {
+    order: -1;
+  }
 }

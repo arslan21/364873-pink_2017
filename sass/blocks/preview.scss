@@ -1,0 +1,22 @@
+.preview {
+  padding-top: 46px;
+  margin-left: 34px;
+  margin-right: 34px;
+  background-color: $page-color;
+}
+
+.preview__text {
+  display: block;
+  padding-bottom: 30px;
+
+  @include font($font-size-big, 24px, 300, $main-font-color);
+}
+
+@media (min-width: 660px) {
+  .preview {
+    padding-top: 59px;
+  }
+  .preview__text {
+    padding-bottom: 10px;
+  }
+}

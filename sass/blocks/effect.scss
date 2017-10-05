@@ -1,0 +1,13 @@
+.effect {
+  display: none;
+}
+
+@media (min-width: 660px) {
+  .effect {
+    display: block;
+  }
+  .effect__tittle {
+    color:red;
+
+  }
+}
