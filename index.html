@@ -32,7 +32,7 @@
       </nav>
     </header>
     <main class="main-page">
-      <section class="main-page__intro intro">
+      <section class="main-page__intro intro intro--main">
         <h1 class="intro__tittle intro__tittle--main">О приложении</h1>
         <span class="intro__slogan">Взгляните на жизнь ярче</span>
         <img class="intro__image" src="img/iphone-hand-mobile@1x.png" width="258" height="286" alt="Приложение пинк">
@@ -59,9 +59,9 @@
           <p class="get__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </section>
       </section>
-      <section class="main-page__peview preview">
-        <span class="preview__text">Устали от серости мегаполиса?</span>
-        <span class="preview__text">Нам есть, что вам предложить!</span>
+      <section class="main-page__peview preview preview--main">
+        <span class="preview__text preview__text--main">Устали от серости мегаполиса?</span>
+        <span class="preview__text preview__text--main">Нам есть, что вам предложить!</span>
       </section>
       <section class="main-page__information information">
         <h1 class="information__tittle">Почему Pink?</h1>
@@ -84,7 +84,7 @@
         <img class="information__image" src="img/iphone-screen-mobile@1x.png" width="157" height="320" alt="Приложение Pink">
       </section>
       <section class="main-page__effect effect">
-        <div class="effect__rewiew">
+        <div class="effect__review">
           <span class="effect__tittle">Эффект на 24 часа!</span>
           <span class="effect__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</span>
           <a href="#" class="effect__link">Узнать больше об исследовании</a>
@@ -96,18 +96,21 @@
           <ul class="reviews__list slider__list">
             <li class="reviews__item">
               <blockquote class="reviews__quote quote slider__item">
+                <cite class="quote__profession">25 лет, водитель трамвая</cite>
                 <cite class="quote__author">Николай Петров</cite>
                 <p class="quote__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
               </blockquote>
             </li>
             <li class="reviews__item">
               <blockquote class="reviews__quote quote slider__item">
+                <cite class="quote__profession">25 лет, водитель трамвая</cite>
                 <cite class="quote__author">Николай Петров</cite>
                 <p class="quote__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
               </blockquote>
             </li>
             <li class="reviews__item">
               <blockquote class="reviews__quote quote slider__item">
+                <cite class="quote__profession">25 лет, водитель трамвая</cite>
                 <cite class="quote__author">Николай Петров</cite>
                 <p class="quote__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
               </blockquote>
@@ -193,20 +196,18 @@
             <span class="contacts__text">Остались вопросы?</span>
             <span class="contacts__text">Свяжитесь с нами!</span>
           </div>
-          <adress class="contacts__adress adress">
-            <div class="adress__phone">
-              <span class="adress__type">Звоните:</span>
-              <span class="adress__adress">+7 (812) 555-66-66</span>
-            </div>
-            <div class="adress__mail">
-              <span class="adress__type">Пишите:</span>
-              <span class="adress__adress">mail@htmlacademy.ru</span>
-            </div>
-            <div class="adress__post">
-              <span class="adress__type">Приезжайте в гости:</span>
-              <span class="adress__adress">ул. Большая Конюшенная, 19/8</span>
-            </div>
-          </adress>
+          <div class="contacts__phone">
+            <span class="contacts__type">Звоните:</span>
+            <adress class="contacts__adress">+7 (812) 555-66-66</adress>
+          </div>
+          <div class="contacts__mail">
+            <span class="contacts__type">Пишите:</span>
+            <adress class="contacts__adress">mail@htmlacademy.ru</adress>
+          </div>
+          <div class="contacts__post">
+            <span class="contacts__type">Приезжайте в гости:</span>
+            <adress class="contacts__adress">ул. Большая Конюшенная, 19/8</adress>
+          </div>
         </div>
       </section>
       <section class="main-page__map map">

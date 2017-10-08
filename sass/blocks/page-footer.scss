@@ -2,12 +2,12 @@
   padding-top: 40px;
   padding-left: 34px;
   padding-right: 34px;
-  display: flex;
-  flex-direction: column;
 
-  > * {
-    margin: 0 auto;
-  }
+  @include flex (column, flex-start, stretch, nowrap);
+}
+
+.page-footer > * {
+  margin: 0 auto;
 }
 
 .page-footer__social {}
@@ -20,4 +20,23 @@
 .page-footer__design {
   margin-top: 40px;
   padding-bottom: 40px;
+}
+
+@media (min-width: 660px) {
+  .page-footer {
+    min-height: 127px;
+
+    @include flex (row, space-between, center, nowrap);
+    @include zero-indent;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 10;
+    background-color: $page-color;
+    opacity: 0.99;
+  }
+
+  .page-footer > * {
+    @include zero-indent;
+
+  }
 }

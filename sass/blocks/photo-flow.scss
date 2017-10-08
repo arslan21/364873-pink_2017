@@ -1,6 +1,6 @@
 .photo-flow {
   background-color: inherit;
-  margin-top: -230px;
+  // margin-top: -230px;
   background-color: $page-color;
   z-index: 3;
   padding-left: 38px;
@@ -10,15 +10,6 @@
 
 .photo-flow__tittle {
   @include visualy-hidden;
-}
-
-.photo-flow__header-text,
-.photo-flow__footer-text {
-  @include font($font-size-normal, 30px, 400, $main-font-color);
-}
-
-.photo-flow__header {
-  margin-bottom: 56px;
 }
 
 .photo-flow__footer {

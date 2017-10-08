@@ -1,22 +1,53 @@
 .preview {
-  padding-top: 46px;
-  margin-left: 34px;
-  margin-right: 34px;
+  padding-left: 22px;
+  padding-right: 22px;
+  min-height: 185px;
+  margin-top: -225px;
   background-color: $page-color;
+  padding-top: 40px;
+  opacity: 0.99;
+
+  &--main{
+  margin-top: 0;
+  min-height: 230px;
+  }
 }
 
 .preview__text {
-  display: block;
-  padding-bottom: 30px;
+  @include font($font-size-normal, 30px, 400, $main-font-color);
 
-  @include font($font-size-big, 24px, 300, $main-font-color);
+  &--main {
+    @include font($font-size-big, 36px, 300, $main-font-color);
+    display: block;
+    }
 }
-
 @media (min-width: 660px) {
   .preview {
-    padding-top: 59px;
+    margin-top: -300px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+    padding-top: 90px;
+    min-height: 228px;
+    @include flex (row, center, stretch, nowrap);
+
+    &--main {
+      margin-top: 0;
+      @include flex (column, center, center, nowrap);
+    }
   }
+
   .preview__text {
-    padding-bottom: 10px;
+    @include font($font-size-medium, 30px, 400, $main-font-color);
+
+      &--main {
+        @include font(40px, 50px, 300, $main-font-color);
+    //     padding-bottom: 10px;
+    }
+
+    &--main:last-child {
+      width: 350px;
+
+    }
   }
 }

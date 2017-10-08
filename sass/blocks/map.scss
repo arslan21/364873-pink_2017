@@ -1,3 +1,11 @@
 .map {
   margin-top: -200px;
+  width: 100%;
+}
+
+@media (min-width: 660px) {
+  .map {
+    height: 351px;
+    margin-top: 0;
+  }
 }

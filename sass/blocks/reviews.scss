@@ -21,3 +21,15 @@
 .reviews__toggles {
   margin-top: 45px;
 }
+
+@media (min-width: 660px) {
+  .reviews__wrapper {
+    overflow: hidden;
+  }
+
+  .reviews__list {
+    display: flex;
+    flex-direction: row;
+    width: 300%;
+  }
+}

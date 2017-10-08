@@ -2,19 +2,22 @@
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 50% 0%;
-  margin-top: -66px;
 
-  @include min-size(100%, 733px);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  // padding: 1;
+  @include size (320px, 462px);
+  padding-top: 100px;
+  position: relative;
+
+  &--main{
+    @include min-size(100%, 733px);
+    @include flex (column, flex-end, stretch, nowrap);
+  }
 }
 
 .intro__tittle {
-  @include font($font-size-big, 24px, 300, $contrast-font-color);
+  @include font($font-size-big, 34px, 300, $contrast-font-color);
   padding-left: 34px;
   padding-right: 34px;
+
   &--main {
     @include visualy-hidden;
   }
@@ -22,38 +25,40 @@
 
 .intro__slogan {
   display: none;
-  @include font(40px, 40px, 300, $contrast-font-color);
+  @include font(40px, 60px, 300, $contrast-font-color);
 }
-
-// .intro__image {
-//
-// }
 
 @media (min-width: 660px) {
   .intro {
-    // background-image: url("../img/.jpg");
+    display: block;
+
+    @include min-size (660px, 729px);
+    padding-top: 180px;
+  }
+
+  &--main {
+    background-image: url("../img/.jpg");
     background-repeat: no-repeat;
     background-position: 50% 0%;
-
-    @include size (660px, 29px);
-    margin-top: -110px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
     padding-top: 185px;
+    @include flex (column, center, stretch, wrap);
+  }
+
+  .intro__tittle {
+    @include font($font-size-tablet-tittle, 68px, 300, $contrast-font-color);
   }
 
   .intro__slogan {
     display: block;
-    @include min-size (312px, 85px );
+    @include size (312px, 185px );
+}
 
-  }
   .intro__image {
-    order: 2;
+    // order: 2;
     @include size (480px, 550px);
     position: absolute;
     left: 0%;
+    bottom: 0%;
     transform: translate(33%);
   }
 }

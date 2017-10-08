@@ -1,13 +1,39 @@
 .effect {
   display: none;
+  background-color: $page-color;
+  margin-top: 60px;
 }
 
 @media (min-width: 660px) {
   .effect {
-    display: block;
-  }
-  .effect__tittle {
-    color:red;
+    @include flex (row, space-between, stretch, wrap);
+    @include min-size (660px, 222px);
 
+    &::before {
+      content: "";
+      display: block;
+      @include size (50%, 276px);
+    }
+
+  }
+
+  .effect__review {
+    @include flex (column, space-between, stretch, nowrap);
+
+    text-align: left;
+    width: 50%;
+
+  }
+
+  .effect__tittle {
+    @include font(30px, 36px, 700, $name-font-color);
+  }
+
+  .effect__text {
+    @include font($font-size-medium, 24px, 400, $name-font-color);
+  }
+
+  .effect__link {
+    @include font($font-size-normal, 10px, 400, $contacts-font-color);
   }
 }

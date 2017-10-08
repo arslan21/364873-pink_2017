@@ -2,7 +2,7 @@
   background-color: $page-color;
   z-index: 2;
   position: relative;
-
+  margin-bottom: 30px;
 }
 
 .contacts__tittle {
@@ -18,20 +18,51 @@
   margin-top: 18px;
 }
 
-.adress__phone,
-.adress__mail,
-.adress__post {
-  margin-top: 27px;
+.adress {
+  background-color: $page-color;
 }
 
-.adress__type {
+.contacts__phone,
+.contacts__mail,
+.contacts__post,
+.contacts__qustion {
+  margin-top: 27px;
+  // width: 50%;
+}
+
+.contacts__type {
   display: block;
 
   @include font($font-size-medium, 30px, 700, $name-font-color);
 }
 
-.adress__adress {
+.contacts__adress {
   margin-top: 10px;
 
   @include font($font-size-big, 30px, 300, $contacts-font-color);
+}
+
+@media (min-width: 660px) {
+  .contacts {
+    display: flex;
+  }
+
+  .contacts__qustion {
+    // display: block;
+  }
+
+  .contacts__wrapper {
+    @include flex (row, center, center, wrap);
+    width: 100%;
+  }
+
+  .contacts__question {
+    width: 51%;
+  }
+
+  .contacts__phone,
+  .contacts__mail,
+  .contacts__post, {
+    width: 50%;
+  }
 }

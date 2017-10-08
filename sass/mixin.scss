@@ -41,14 +41,11 @@
   min-height: $min-height;
 }
 
-// @mixin menu-font-size {
-//   font-size: $font-size + 4px;
-//   font-weight: 700;
-//   color: $menu-font-color;
-// }
-//
-// @mixin slogan-size {
-//   font-size: $font-size+10px;
-//   font-weight: 300;
-//   color: $menu-font-color;
-// }
+@mixin flex ($flex-direction, $justify-content, $align-items, $wrap) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-wrap: $wrap;
+  /*@include flex (row, flex-start, stretch, nowrap);*/
+}
