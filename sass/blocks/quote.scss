@@ -1,7 +1,6 @@
 .quote__profession {
   display: none;
-  padding-top: 0;
-  padding-bottom: 0;
+  @include padding-tb (0);
 }
 
 
@@ -10,15 +9,19 @@
   font-style: normal;
 }
 
-.quote__text {
+.quote__text,
+.quote__profession {
   @include font($font-size-normal, 30px, 400, $main-font-color);
+  font-style: normal;
 }
 
 @media (min-width: 660px) {
   .quote {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
+    @include flex (column-reverse, space-between, stretch, nowrap);
+  }
+
+  .quote__author {
+    @include font(20px, 30px, 700, $name-font-color);
   }
 
   .quote__profession {

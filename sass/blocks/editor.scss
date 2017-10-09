@@ -1,5 +1,5 @@
 .editor__list {
-  @include flex (row, space-arround, stretch, nowrap);
+  @include flex (row, space-around, stretch, nowrap);
   margin-bottom: 76px;
 }
 .editor__item {

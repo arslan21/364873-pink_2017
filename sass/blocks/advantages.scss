@@ -1,9 +1,8 @@
 .advantages {
   @include list-style-none;
-  background-color: $card-color;
-  padding-left: 34px;
-  padding-right: 34px;
+  @include padding-lr (34px);
   padding-bottom: 30px;
+  background-color: $card-color;
 }
 
 .advantages__item {
@@ -21,13 +20,11 @@
 
 @media (min-width: 660px) {
   .advantages {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    @include flex (column, flex-start, flex-end, noerap);
+    @include padding-lr (0);
     text-align: left;
-    padding-left: 0;
-    padding-right: 0;
   }
+
   .advantages__wrapper {
     width: 50%;
   }

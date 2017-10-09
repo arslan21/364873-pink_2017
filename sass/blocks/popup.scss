@@ -1,21 +1,19 @@
 .popup {
-  box-sizing: content-box;
   background-image: $page-color;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
-  padding-top: 26px;
-  padding-bottom: 50px;
-  padding-left: 22px;
-  padding-right: 22px;
+  padding-top: 37px;
   text-align: center;
+  @include min-size ($mobile-width, 319px);
+  @include margin-lr ($mobile-width / 2 - $popup-mobile-width / 2);
 }
 
 
 .poppup__background {
-  @include min-size (276px, 163px);
-  box-sizing: border-box;
+  @include min-size ($popup-mobile-width, 163px);
   background-color: $card-color;
   padding-top: 50px;
   padding-bottom: 54px;
+  margin-bottom: 0;
 }
 
 .popup__tittle {
@@ -25,11 +23,33 @@
 
 .popup__message {
   @include font($font-size-normal, 24px, 400, $main-font-color);
-  padding-bottom: 27px;
+  @include margin-lr (22px);
+  margin-bottom: 40px;
 }
 
 .popup__button {
-  display: block;
+  padding-top: 14px;
+  @include font($font-size-medium, 30px, 700, $contrast-font-color);
+  @include min-size ($mobile-width - 22px *2, 63px); /*@include margin-lr (22px);*/
+}
 
-  @include link-decoration;
+@media (min-width: $tablet-width) {
+  .popup {
+    @include min-size ($popup-tablet-width, 396px);
+    @include margin-lr ($tablet-width / 2 - $popup-tablet-width / 2);
+  }
+
+  .popup__tittle {
+    @include font($font-size-tablet-popup-tittle, 40px, 700, $name-font-color);
+  }
+
+  .popup__message {
+    @include font($font-size-medium, 24px, 400, $main-font-color);
+    @include margin-lr (88px);
+  }
+
+  .poppup__background {
+    @include min-size ($popup-tablet-width, 163px);
+  }
+
 }

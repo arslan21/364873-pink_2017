@@ -13,13 +13,10 @@
 
 @media (min-width: 660px) {
   .information {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-left: 35px;
-    padding-right: 35px;
+    @include flex (row, space-between, stretch, wrap);
+    @include padding-lr (35px);
   }
+
   .information__image {
     order: -1;
   }

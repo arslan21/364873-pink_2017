@@ -1,10 +1,9 @@
 .get {
-  background-color: #1d2531;
+  @include padding-lr (20px);
   padding-top: 28px;
-  padding-left: 20px;
-  padding-right: 20px;
   padding-bottom: 20px;
-  width: 320px;
+  background-color: #1d2531;
+  width: $mobile-width;
 }
 
 .get__tittle {

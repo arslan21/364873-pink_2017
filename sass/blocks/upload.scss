@@ -25,6 +25,7 @@
 
 .upload__buttons {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
+  @include padding-tb (38px);
   // @include padding-lr (39px);
 }
 
@@ -51,5 +52,11 @@
   .upload__image {
     @include size ($tablet-width / 2 - $padding-photo-flow - 9px, 400px);
     margin-bottom: 0;
+  }
+
+  .upload__buttons {
+    border-top: none;
+    @include padding-tb (0);
+    // @include padding-lr (39px);
   }
 }

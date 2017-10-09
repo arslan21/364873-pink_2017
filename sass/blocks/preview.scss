@@ -1,6 +1,5 @@
 .preview {
-  padding-left: 22px;
-  padding-right: 22px;
+  @include padding-lr(22px);
   min-height: 185px;
   margin-top: -225px;
   margin-bottom: 0;
@@ -22,12 +21,12 @@
     display: block;
     }
 }
+
 @media (min-width: 660px) {
   .preview {
     margin-top: -300px;
-    margin-left: 0;
-    margin-right: 0;
-    // margin-bottom: 60px;
+
+    @include padding-lr (0);
     padding-top: 90px;
     min-height: 228px;
     @include flex (row, center, stretch, nowrap);
@@ -39,16 +38,12 @@
   }
 
   .preview__text {
-    @include font($font-size-medium, 30px, 400, $main-font-color);
-
       &--main {
         @include font(40px, 50px, 300, $main-font-color);
-    //     padding-bottom: 10px;
     }
 
     &--main:last-child {
       width: 350px;
-
     }
   }
 }

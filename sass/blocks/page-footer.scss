@@ -1,7 +1,6 @@
 .page-footer {
+  @include padding-lr (34px);
   padding-top: 40px;
-  padding-left: 34px;
-  padding-right: 34px;
 
   @include flex (column, flex-start, stretch, nowrap);
 }
@@ -28,8 +27,7 @@
 
     @include flex (row, space-between, center, nowrap);
     @include zero-indent;
-    padding-left: 20px;
-    padding-right: 20px;
+    @include padding-lr (20px);
     z-index: 10;
     background-color: $page-color;
     opacity: 0.99;

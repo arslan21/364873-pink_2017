@@ -15,8 +15,7 @@
 
 .intro__tittle {
   @include font($font-size-big, 34px, 300, $contrast-font-color);
-  padding-left: 34px;
-  padding-right: 34px;
+  @include padding-lr (34px);
 
   &--main {
     @include visualy-hidden;
@@ -45,7 +44,7 @@
   }
 
   .intro__tittle {
-    @include font($font-size-tablet-tittle, 68px, 300, $contrast-font-color);
+    @include font($font-size-tablet-tittle, 50px, 300, $contrast-font-color);
   }
 
   .intro__slogan {

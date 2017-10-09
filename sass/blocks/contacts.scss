@@ -27,7 +27,6 @@
 .contacts__post,
 .contacts__qustion {
   margin-top: 27px;
-  // width: 50%;
 }
 
 .contacts__type {
@@ -47,8 +46,8 @@
     display: flex;
   }
 
-  .contacts__qustion {
-    // display: block;
+  .contacts__text {
+    @include font(40px, 30px, 300, $main-font-color);
   }
 
   .contacts__wrapper {
@@ -57,7 +56,7 @@
   }
 
   .contacts__question {
-    width: 51%;
+    @include margin-lr (126px);
   }
 
   .contacts__phone,

@@ -1,6 +1,7 @@
 .contest {
   background-color: inherit;
-  margin-top: -230px;
+  margin-top: -14px;
+  margin-bottom: 30px;
   background-color: $page-color;
   z-index: 3;
   padding-top: 24px;
@@ -12,4 +13,11 @@
 
 .cotnest__form {
   // padding-top: 49px;
+}
+
+@media (min-width: $tablet-width) {
+  .contest {
+    padding-top: 0;
+    @include padding-lr (22px);
+  }
 }

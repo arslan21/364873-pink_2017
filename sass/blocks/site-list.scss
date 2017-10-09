@@ -14,8 +14,7 @@
 
     @include font($font-size-medium, 32px, 700, $contrast-font-color);
     @include link-decoration;
-    padding-top: 18px;
-    padding-bottom: 18px;
+    @include padding-tb (18px);
     text-align: center;
   }
 }

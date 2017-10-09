@@ -30,7 +30,7 @@
   }
 
   .effect__text {
-    @include font($font-size-medium, 24px, 400, $name-font-color);
+    @include font($font-size-medium, 24px, 400, $main-font-color);
   }
 
   .effect__link {

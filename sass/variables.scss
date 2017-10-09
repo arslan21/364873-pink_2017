@@ -5,17 +5,24 @@ $name-font-color: #000000;
 $form-button-color: #2aab6d;
 
 $font-size-normal: 14px;
-$font-size-little: $font-size-normal - 2px;
-$font-size-medium: $font-size-normal + 4px;
-$font-size-big: $font-size-normal + 10px;
-$font-size-tablet-tittle: ($font-size-big * 2) + 2;
+$font-size-little: 12px;
+$font-size-medium: 18px;
+$font-size-big: 24px;
+$font-size-tablet-popup-tittle: 30px;
+$font-size-tablet-tittle: 50px;
 
 $page-color: #ffffff;
 $menu-main-color: #283446;
 $card-color: #f2f2f2;
 
 $padding-photo-flow: 20px;
+$padding-form: 20px;
+$margin-form: 60px;
+
 $slider-item-tablet-width: 56px;
+$popup-mobile-width: 320px;
+$popup-tablet-width: 494px;
+
 
 $mobile-width: 320px;
 $tablet-width: 660px;

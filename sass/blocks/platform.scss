@@ -1,12 +1,11 @@
 .platform {
   @include zero-indent;
+  @include margin-tb (32px);
+  @include padding-lr (38px);
   margin-top: 32px;
   margin-bottom: 32px;
-  padding-left: 38px;
-  padding-right: 38px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+
+  @include flex (row, space-between, stretch, wrap);
 }
 
 .platform__item {

@@ -1,5 +1,6 @@
 .form-button {
-  @include font($font-size-medium, 30px, 700, $contrast-font-color);
+  @include link-decoration;
+  display: block;
   text-transform: uppercase;
   border: 2px solid $form-button-color;
   background-color: $form-button-color;
