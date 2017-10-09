@@ -1,11 +1,10 @@
 .editor__list {
-  display: flex;
-  justify-content: space-around;
+  @include flex (row, space-arround, stretch, nowrap);
   margin-bottom: 76px;
 }
-
 .editor__item {
   @include size(48px, 44px);
+  position: relative;
   background-repeat: no-repeat;
 
   &--corp {
@@ -19,20 +18,14 @@
   &--contrast {
     background-image: url("../img/icon-editor-contrast.svg");
   }
-  position: relative;
-}
 
-.editor__slider {
-  @include visualy-hidden;
-}
-
-.editor__item {
   &::before,
   &::after {
     content: "";
     display: none;
     position: absolute;
   }
+
   &::before {
     @include size (240px, 2px);
     bottom: -34px;
@@ -48,5 +41,60 @@
   &--active::before,
   &--active::after {
     display: block;
+  }
+}
+
+.editor__slider {
+  @include visualy-hidden;
+
+  &::before {
+    @include size (240px, 2px);
+    bottom: -34px;
+    background-color: black;
+  }
+  &::after {
+    @include size (14px, 14px);
+    bottom: -40px;
+    background-image: url("../img/icon-editor-diagram-fill.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &--active::before,
+  &--active::after {
+    display: block;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .editor__list {
+    @include flex (column, space-between, flex-start, nowrap);
+    // min-height: ;
+    width: $tablet-width / 2 - $padding-photo-flow - 9px;
+    padding-left: 15px;
+    margin-bottom: 0px;
+  }
+
+  .editor__item {
+    display: block;
+    @include size (275px, $slider-item-tablet-width);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 13px;
+
+    &::before,
+    &::after {
+      display: block;
+    }
+
+    &::before {
+      right: 0;
+      bottom: 0;
+      transform: translateY(0 - $slider-item-tablet-width / 2);
+    }
+
+    &::after {
+      right: 0;
+      bottom: 0;
+      transform: translateY(6px - $slider-item-tablet-width / 2);
+    }
   }
 }

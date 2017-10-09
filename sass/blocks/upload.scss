@@ -1,23 +1,22 @@
 .upload {
-  background-color: $card-color;
+  @include padding-lr ($padding-photo-flow);
   padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  background-color: $card-color;
 }
 
 .upload__tittle {
   @include visualy-hidden;
 }
 
-.upload-image {
+.upload__image {
   display: block;
   margin: 0 auto;
   margin-bottom: 42px;
 
   @include size(100%, 374px);
-  background-repeat: no-repeat;
-  background-size: auto;
   background-image: url("../img/photo-road-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
 
   & p {
     @include visualy-hidden;
@@ -25,15 +24,32 @@
 }
 
 .upload__buttons {
-  border-top: 1px solid rgba(242, 242, 242, 0.1);
-  padding-top: 38px;
-  padding-bottom: 41px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  // @include padding-lr (39px);
 }
 
 .upload__button {
   @include font($font-size-normal, 18px, 700, $contacts-font-color);
   margin-bottom: 12px;
   &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .upload {
+    padding-top: 57px;
+    padding-bottom: 54px;
+    @include size ($tablet-width, 511px);
+  }
+
+  .upload__editor {
+    @include flex (column, space-between, center, wrap);
+    height: 400px;
+  }
+
+  .upload__image {
+    @include size ($tablet-width / 2 - $padding-photo-flow - 9px, 400px);
     margin-bottom: 0;
   }
 }

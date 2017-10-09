@@ -19,7 +19,6 @@
   list-style: none;
 }
 
-
 @mixin link-decoration {
   text-decoration: none;
 }
@@ -48,4 +47,24 @@
   align-items: $align-items;
   flex-wrap: $wrap;
   /*@include flex (row, flex-start, stretch, nowrap);*/
+}
+
+@mixin padding-lr ($padding-left-right) {
+  padding-left: $padding-left-right;
+  padding-right: $padding-left-right;
+}
+
+@mixin padding-tb ($padding-top-bottom) {
+  padding-top: $padding-top-bottom;
+  padding-bottom: $padding-top-bottom;
+}
+
+@mixin margin-lr ($margin-left-right) {
+  margin-left: $margin-left-right;
+  margin-right: $margin-left-right;
+}
+
+@mixin margin-tb ($margin-top-bottom) {
+  margin-top: $margin-top-bottom;
+  margin-bottom: $margin-top-bottom;
 }

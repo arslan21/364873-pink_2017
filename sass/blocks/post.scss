@@ -2,17 +2,23 @@
   background-color: $card-color;
 }
 
+.post a {
+  @include link-decoration;
+  display: block;
+}
+
 .post__review {
   @include zero-indent;
+}
+
+.post__wrapper {
+  @include padding-lr (18px);
 }
 
 .post__likes,
 .post__review {
   text-align: left;
-  padding-left: 17px;
 }
-
-
 
 .post__author {
   @include font($font-size-normal, 24px, 700, $main-font-color);
@@ -28,8 +34,41 @@
 }
 
 .post__image {
-  @include size (100%, 137px);
+  @include size ($mobile-width - $padding-photo-flow - $padding-photo-flow, 180px);
   object-fit: cover;
+
+  &--panorama {
+    @include size ($mobile-width, 137px);
+    transform: translateX(0px-$padding-photo-flow);
+  }
 }
+
 //.post__likes {
 //}
+
+@media (min-width: $tablet-width) {
+  .post__wrapper {
+    min-height: 155px;
+    margin-top: -5px;
+    @include padding-lr (28px);
+    @include padding-tb (24px);
+    @include flex (column, space-between, stretch, nowrap);
+  }
+
+  .post__likes,
+  .post__review {
+    text-align: left;
+  }
+
+  .post__text {
+    margin-top: 0px;
+  }
+
+  .post__image {
+    @include size (($tablet-width / 2) - $padding-photo-flow * 1.5, 300px);
+
+    &--panorama {
+      @include size ($tablet-width, 509px);
+    }
+  }
+}
