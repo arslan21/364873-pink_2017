@@ -45,14 +45,16 @@
 }
 
 .editor__slider {
-  @include visualy-hidden;
+  display: none;
 
   &::before {
+    content: "";
     @include size (240px, 2px);
     bottom: -34px;
     background-color: black;
   }
   &::after {
+    content: "";
     @include size (14px, 14px);
     bottom: -40px;
     background-image: url("../img/icon-editor-diagram-fill.svg");
@@ -69,14 +71,14 @@
   .editor__list {
     @include flex (column, space-between, flex-start, nowrap);
     // min-height: ;
-    width: $tablet-width / 2 - $padding-photo-flow - 9px;
+    // width: $tablet-width / 2 - $padding-photo-flow - 9px;
     padding-left: 15px;
     margin-bottom: 0px;
   }
 
   .editor__item {
     display: block;
-    @include size (275px, $slider-item-tablet-width);
+    @include size (275px, $slider-item-height);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 13px;
 
@@ -88,13 +90,26 @@
     &::before {
       right: 0;
       bottom: 0;
-      transform: translateY(0 - $slider-item-tablet-width / 2);
+      transform: translateY(0 - $slider-item-height / 2);
     }
 
     &::after {
       right: 0;
       bottom: 0;
-      transform: translateY(6px - $slider-item-tablet-width / 2);
+      transform: translateY(6px - $slider-item-height / 2);
+    }
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .editor__item {
+    @include size (410px, $slider-item-height);
+
+  }
+
+  .editor__item {
+    &::before {
+      @include size (290px, 2px);
     }
   }
 }

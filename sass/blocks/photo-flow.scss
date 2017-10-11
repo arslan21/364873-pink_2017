@@ -2,8 +2,7 @@
   margin-top: -14px;
   background-color: $page-color;
   z-index: 3;
-  padding-left: $padding-photo-flow;
-  padding-right: $padding-photo-flow;
+  @include padding-lr ($padding-photo-flow);
   opacity: 0.99;
   // padding-top: 54px;
 }
@@ -48,6 +47,43 @@
     }
 
     &:nth-child(2n-1) {
+      margin-right: 0px;
+    }
+  }
+
+  .photo-flow__footer {
+    @include font($font-size-medium, 30px, 400, $main-font-color);
+    @include padding-lr (100px);
+    margin-bottom: 70px;
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .photo-flow {
+    @include padding-lr ($padding-desktop);
+  }
+
+  .photo-flow__list {
+  }
+
+  .photo-flow__item {
+    width: 300px; /*20px между карточками*/
+    min-height: 555px;
+    margin-right: 20px;
+
+    &.post--panorama {
+      width: $desktop-width - $padding-desktop * 2;
+    }
+
+    &:first-child {
+      // flex-grow: 2
+    }
+
+    &:nth-child(2n-1) {
+      margin-right: 20px;
+    }
+
+    &:nth-child(3n + 1) {
       margin-right: 0px;
     }
   }

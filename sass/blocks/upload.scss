@@ -60,3 +60,40 @@
     // @include padding-lr (39px);
   }
 }
+
+@media (min-width: $min-desktop-width) {
+  .upload {
+    @include margin-lr ($padding-desktop);
+    @include size ($desktop-width - $padding-desktop * 2, 511px);
+    @include padding-tb (57px);
+    @include padding-lr (80px);
+
+  }
+
+  .upload__editor {
+    @include flex (column, space-between, center, wrap);
+    height: 400px;
+  }
+
+  .upload__image {
+    @include size (300px, 400px);
+    @include margin-lr (0);
+    // margin-right: 90px;
+  }
+
+  .upload__buttons {
+    @include flex (row, space-between, center, wrap);
+  }
+
+  .upload__buttons .upload__button {
+    width: 183px;
+    @include margin-tb (0);
+    @include margin-lr (44px);
+
+    &:nth-child(2n) {
+      @include margin-lr (0);
+
+    }
+
+  }
+}

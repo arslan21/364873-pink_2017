@@ -65,10 +65,26 @@
   }
 
   .post__image {
-    @include size (($tablet-width / 2) - $padding-photo-flow * 1.5, 300px);
+    @include size (300px, 300px);
 
     &--panorama {
       @include size ($tablet-width, 509px);
+    }
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .post__image {
+    @include size (300px, 400px);
+
+    &--panorama {
+      @include size ($desktop-width, 506px);
+    }
+  }
+
+  .post__image {
+    &--panorama {
+      transform: translateX(0px-$padding-desktop);
     }
   }
 }
