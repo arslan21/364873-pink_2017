@@ -183,7 +183,7 @@
   }
 
   .form__textarea {
-    margin: 0 auto;
+    @include margin-lr ($margin-form);
     @include min-size ($tablet-width - $margin-form * 2 -$padding-form * 2 - 4px, 189px);
     padding: 20px;
   }
@@ -198,6 +198,61 @@
     margin-right: 0;
     margin-left: auto;
   }
+}
 
+@media (min-width: $min-desktop-width) {
+  .form {
+    @include flex (row, space-between, baseline, wrap);
+  }
+
+  .form__name,
+  .form__achievements,
+  .form__contacts,
+  .form__your-app,
+  .form__description {
+    flex-basis: 431px;
+  }
+
+  .form__name,
+  .form__your-app {
+    // flex-shrink: 2;
+  }
+
+  .form__contacts {
+    @include flex (row, flex-start, flex-start, nowrap);
+    padding-top: 44px;
+    margin-bottom: 37px;
+  }
+
+  .form__contacts .form__label-text {
+    @include flex (column, flex-start, flex-start, nowrap);
+    width: 371px;
+    @include margin-lr ($margin-form);
+  }
+
+  .form__contacts .form__input-text {
+    width: 100%;
+  }
+
+  .form__achievements,
+  .form__contacts,
+  .form__description {
+    min-width: $desktop-width - $padding-desktop * 2;
+
+  }
+
+  .form__name .form__label-text {
+    @include flex (row, space-between, baseline, nowrap);
+    width: 100%;
+  }
+
+  .form__textarea {
+    @include min-size ($desktop-width - $margin-form * 2 -$padding-desktop * 2 - 4px, 124px);
+  }
+
+  .form__button,
+  .form__small {
+    margin-bottom: 0;
+  }
 
 }

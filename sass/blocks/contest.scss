@@ -21,3 +21,11 @@
     @include padding-lr (22px);
   }
 }
+
+@media (min-width: $tablet-width) {
+  .contest {
+    padding-top: 0;
+    @include padding-lr ($padding-desktop);
+    margin-bottom: 0;
+  }
+}
