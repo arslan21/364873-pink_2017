@@ -4,8 +4,14 @@
   opacity: 0.99;
 }
 
-@media (min-width: 660px) {
+@media (min-width: $tablet-width) {
   .main-page {
     margin-top: -112px;
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .main-page {
+    margin-top: -110px;
   }
 }

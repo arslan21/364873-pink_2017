@@ -41,7 +41,7 @@
   @include font($font-size-big, 30px, 300, $contacts-font-color);
 }
 
-@media (min-width: 660px) {
+@media (min-width: $tablet-width) {
   .contacts {
     display: flex;
   }
@@ -63,5 +63,19 @@
   .contacts__mail,
   .contacts__post, {
     width: 50%;
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .contacts {
+
+  }
+
+  .contacts__text {
+    @include font(50px, 30px, 400, $main-font-color);
+  }
+
+  .contacts__question {
+    @include margin-lr (350px);
   }
 }

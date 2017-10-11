@@ -2,7 +2,10 @@
   background-color: $menu-main-color;
   z-index: 10;
   opacity: 0.99;
+}
 
+.page-header__logo {
+  @include link-decoration;
 }
 
 .page-header__logo-image {
@@ -18,11 +21,12 @@
   margin-bottom: 25px;
 }
 
-@media (min-width: 660px) {
+@media (min-width: $tablet-width) {
   .page-header__logo {
     display: block;
     position: relative;
     height: 109px;
+
     &::before {
       content: "";
       position: absolute;
@@ -38,5 +42,15 @@
     // display: none;
     @include visualy-hidden;
 
-    }
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .page-header {
+    @include flex (row, space-between, center, nowrap);
+    @include min-size ($desktop-width, 110px)
+    @include padding-lr ($padding-desktop);
+    // background-color: transparentize($menu-main-color, 0.3);
+    opacity: 0.3;
+  }
 }

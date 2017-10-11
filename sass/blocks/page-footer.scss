@@ -38,3 +38,19 @@
 
   }
 }
+
+@media (min-width: 660px) {
+  .page-footer {
+    min-height: 197px;
+
+    @include padding-lr ($padding-desktop);
+    z-index: 10;
+    background-color: $page-color;
+    opacity: 0.99;
+  }
+
+  .page-footer > * {
+    @include zero-indent;
+
+  }
+}

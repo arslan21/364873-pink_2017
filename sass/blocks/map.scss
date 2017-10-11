@@ -1,11 +1,21 @@
 .map {
   margin-top: -200px;
   width: 100%;
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
-@media (min-width: 660px) {
+@media (min-width: $tablet-width) {
   .map {
-    height: 351px;
+    height: 380px;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .map {
+    height: 520px;
     margin-top: 0;
   }
 }

@@ -27,19 +27,20 @@
   @include font(40px, 60px, 300, $contrast-font-color);
 }
 
-@media (min-width: 660px) {
+@media (min-width: $tablet-width) {
   .intro {
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
     display: block;
 
-    @include min-size (660px, 729px);
+    @include min-size ($tablet-width, 729px);
     padding-top: 180px;
   }
 
   &--main {
-    background-image: url("../img/.jpg");
-    background-repeat: no-repeat;
-    background-position: 50% 0%;
     padding-top: 185px;
+
     @include flex (column, center, stretch, wrap);
   }
 
@@ -49,6 +50,7 @@
 
   .intro__slogan {
     display: block;
+
     @include size (312px, 185px );
 }
 
@@ -59,5 +61,21 @@
     left: 0%;
     bottom: 0%;
     transform: translate(33%);
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .intro {
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+
+    @include min-size ($desktop-width, 853px);
+
+  }
+
+  .intro__tittle {
+    @include padding-lr ($padding-desktop);
+
   }
 }

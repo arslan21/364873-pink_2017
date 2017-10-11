@@ -4,17 +4,17 @@
   margin-top: 60px;
 }
 
-@media (min-width: 660px) {
+@media (min-width: $tablet-width) {
   .effect {
-    @include flex (row, space-between, stretch, wrap);
-    @include min-size (660px, 222px);
+    @include flex (row, flex-start, stretch, wrap);
+    @include min-size (100%, 222px);
 
     &::before {
       content: "";
       display: block;
-      @include size (50%, 276px);
+      @include size (238px, 276px);
+      margin-left: 70px
     }
-
   }
 
   .effect__review {
@@ -22,7 +22,6 @@
 
     text-align: left;
     width: 50%;
-
   }
 
   .effect__tittle {
@@ -35,5 +34,36 @@
 
   .effect__link {
     @include font($font-size-normal, 10px, 400, $contacts-font-color);
+    @include list-style-none;
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .effect {
+    @include min-size (100%, 429px);
+
+    &::before {
+      @include size (298px, 276px);
+    }
+  }
+
+  .effect__review {
+    @include flex (column, center, stretch, nowrap);
+    text-align: left;
+    width: 525px;
+  }
+
+  .effect__tittle,
+  .effect__text {
+    margin-bottom: 20px;
+  }
+
+  .effect__text {
+    @include font($font-size-medium, 30px, 400, $main-font-color);
+  }
+
+  .effect__link {
+    @include font($font-size-medium, 30px, 400, $contacts-font-color);
   }
 }

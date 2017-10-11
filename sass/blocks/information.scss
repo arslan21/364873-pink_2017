@@ -11,7 +11,7 @@
 .information__image {
 }
 
-@media (min-width: 660px) {
+@media (min-width: $tablet-width) {
   .information {
     @include flex (row, space-between, stretch, wrap);
     @include padding-lr (35px);
@@ -20,4 +20,22 @@
   .information__image {
     order: -1;
   }
+}
+
+@media (min-width: $min-desktop-width) {
+  .information {
+    @include flex (column, flex-start, stretch, nowrap);
+    @include min-size ($desktop-width, 610px);
+    @include padding-lr ($padding-desktop);
+  }
+
+  .information__image {
+    @include flex (row, center, flex-start, wrap);
+  }
+
+  .information__list {
+
+  }
+
+
 }
