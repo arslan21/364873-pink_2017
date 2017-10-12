@@ -1,7 +1,8 @@
 .page-header {
   background-color: $menu-main-color;
-  z-index: 10;
-  opacity: 0.99;
+  // margin-bottom: -100px;
+  // z-index: 10;
+  // opacity: 0.99;
 }
 
 .page-header__logo {
@@ -50,6 +51,7 @@
     @include flex (row, space-between, center, nowrap);
     @include min-size ($desktop-width, 110px)
     @include padding-lr ($padding-desktop);
+    // background-color: transparent;
     // background-color: transparentize($menu-main-color, 0.3);
     opacity: 0.3;
   }
