@@ -1,17 +1,17 @@
 .main-page {
   text-align: center;
-  margin-top: -66px;
+  // margin-top: -66px;
   opacity: 0.99;
 }
 
 @media (min-width: $tablet-width) {
   .main-page {
-    margin-top: -112px;
+    // margin-top: -112px;
   }
 }
 
 @media (min-width: $min-desktop-width) {
   .main-page {
-    margin-top: -110px;
+    // margin-top: -110px;
   }
 }

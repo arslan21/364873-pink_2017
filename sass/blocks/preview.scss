@@ -1,11 +1,12 @@
 .preview {
   @include padding-lr(22px);
   min-height: 185px;
-  margin-top: -225px;
+  margin-top: -18px;
+  // margin-top: -225px;
   margin-bottom: 0;
   background-color: $page-color;
   padding-top: 40px;
-  opacity: 0.99;
+  // opacity: 0.99;
 
   &--main{
   margin-top: 0;
@@ -24,7 +25,7 @@
 
 @media (min-width: $tablet-width) {
   .preview {
-    margin-top: -300px;
+    // margin-top: -300px;
 
     @include padding-lr (0);
     padding-top: 90px;
@@ -51,7 +52,7 @@
 
 @media (min-width: $min-desktop-width) {
   .preview {
-    margin-top: -460px;
+    // margin-top: -460px;
     @include padding-lr($padding-desktop + 60px);
     padding-top: 70px;
     min-height: 322px;

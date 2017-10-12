@@ -1,14 +1,14 @@
 .intro {
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 0%;
+  background-position: 50% -66px;
 
-  @include size (320px, 462px);
-  padding-top: 100px;
+  @include min-size (320px, 171px);
+  padding-top: 30px;
   position: relative;
 
   &--main{
-    @include min-size(100%, 733px);
+    // @include min-size(100%, 733px);
     @include flex (column, flex-end, stretch, nowrap);
   }
 }
@@ -29,24 +29,26 @@
 
 @media (min-width: $tablet-width) {
   .intro {
-    background-color: blue;        /*убрать фон*/
-    opacity: 0.1;        /*убрать фон*/
-    background-image: url("../img/");
+    @include min-size ($tablet-width, 330px);
+    background-image: url("../img/back-tablet@1x.jpg");
     background-repeat: no-repeat;
-    background-position: 50% 0%;
+    background-position: 50% -110px;
+    // background-size: cover;
     display: block;
 
-    @include min-size ($tablet-width, 729px);
-    padding-top: 180px;
+    // @include min-size ($tablet-width, 729px);
+    padding-top: 45px;
+
+    &--main {
+      background-image: url("../img/back-tablet@1x.jpg");
+
+      @include min-size ($tablet-width, 619px);
+      padding-top: 100px;
+
+      @include flex (column, center, stretch, wrap);
+    }
   }
 
-  &--main {
-    background-color: blue;        /*убрать фон*/
-    opacity: 0.01;
-    padding-top: 185px;
-
-    @include flex (column, center, stretch, wrap);
-  }
 
   .intro__tittle {
     @include font($font-size-tablet-tittle, 50px, 300, $contrast-font-color);
@@ -70,12 +72,22 @@
 
 @media (min-width: $min-desktop-width) {
   .intro {
-    background-image: url("../img/.jpg");
+    background-image: url("../img/back-desktop.jpg");
     background-repeat: no-repeat;
-    background-position: 50% 0%;
+    background-position: 50% -110px;
 
-    @include min-size ($desktop-width, 853px);
+    @include min-size ($desktop-width, 286px);
 
+    &--main {
+      @include min-size ($desktop-width, 743px);
+      padding-top: 110px;
+      @include padding-lr (109px);
+    }
+  }
+
+  .intro__image {
+    // order: 2;
+    @include size (700px, 640px);
   }
 
   .intro__tittle {
