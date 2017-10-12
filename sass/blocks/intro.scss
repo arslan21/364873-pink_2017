@@ -8,7 +8,6 @@
   position: relative;
 
   &--main{
-    // @include min-size(100%, 733px);
     @include flex (column, flex-end, stretch, nowrap);
   }
 }
@@ -33,10 +32,8 @@
     background-image: url("../img/back-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: 50% -110px;
-    // background-size: cover;
     display: block;
 
-    // @include min-size ($tablet-width, 729px);
     padding-top: 45px;
 
     &--main {
