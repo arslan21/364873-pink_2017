@@ -21,16 +21,14 @@
   padding-bottom: 40px;
 }
 
-@media (min-width: 660px) {
+@media (min-width: $tablet-width) {
   .page-footer {
     min-height: 127px;
 
     @include flex (row, space-between, center, nowrap);
     @include zero-indent;
     @include padding-lr (20px);
-    z-index: 10;
     background-color: $page-color;
-    opacity: 0.99;
   }
 
   .page-footer > * {
@@ -39,18 +37,10 @@
   }
 }
 
-@media (min-width: 660px) {
+@media (min-width: $min-desktop-width) {
   .page-footer {
     min-height: 197px;
 
     @include padding-lr ($padding-desktop);
-    z-index: 10;
-    background-color: $page-color;
-    opacity: 0.99;
-  }
-
-  .page-footer > * {
-    @include zero-indent;
-
   }
 }
