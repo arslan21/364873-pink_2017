@@ -26,7 +26,6 @@
   display: block;
 
   @include size(27px, 27px);
-  // width: 27px;
   background-repeat: no-repeat;
 
   &--true {
@@ -35,5 +34,15 @@
 
   &--false {
     background-image: url("../img/icon-no.svg");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .tariff__property {
+    display: none;
+
+    &--charact {
+      display: block;
+    }
   }
 }

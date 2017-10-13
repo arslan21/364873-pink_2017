@@ -3,8 +3,6 @@
   padding-top: 60px;
   padding-bottom: 50px;
   margin-bottom: 50px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .price__tittle {
@@ -17,4 +15,12 @@
 
 .price__wrapper {
   overflow: hidden;
+  display: flex;
+  justify-content: center; /*положение таблицы*/
+}
+
+@media (min-width: $tablet-width) {
+  .price__wrapper {
+    width: 616px;
+  }
 }
