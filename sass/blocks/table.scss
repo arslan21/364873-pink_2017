@@ -1,68 +1,97 @@
 .table {
   display: table;
-  // display: table-column-group;
   border-collapse: collapse;
-  @include margin-lr (20px);
-}
-
-.table__cell-1,
-.table__cell-2,
-.table__cell-3, {
-  display: table-row-group;
 }
 
 .table__caption {
   display: table-caption;
 }
 
-.table__column {
-  // display: table-column;
-
-  &--charact {
-    display: none;
-  }
+.table__row {
+  display: table-row;
 }
 
-.table__header {
+.table__row.table__header {
   display: table-header-group;
-  @include min-size (276px, 98px);
-  border: 2px solid $main-font-color;
-  background-color: $main-font-color;
-  @include flex (column, center, stretch, nowrap);
 }
+
+
 
 .table__cell {
-  @include min-size (280px, 63px);
+  width: 276px;
+  height: 65px;
   border: 2px solid #e5e5e5;
   background-color: $page-color;
-  @include flex (row, space-between, baseline, nowrap);
-  padding-left: 23px;
-  padding-right: 13px;
-  // display: table-cell;
+  display: table-cell;
+}
+.table__cell--base {
+  display: none;
+  border: 2px solid #e5e5e5;
+  background-color: $page-color;
+}
+
+.table__header .table__cell,
+.table__header .table__cell--base  {
+  display: table-cell;
+  width: 33%;
+  height: 98px;
+  border: 2px solid #e5e5e5;
+  background-color: $main-font-color;
+}
+
+.table__cell--base {
+  display: none;
+}
+
+.table__cell .tariff {
+  @include flex (row, space-between, center, nowrap);
+}
+
+.table__header .table__cell .tariff {
+  @include flex (row, center, center, wrap);
 }
 
 @media (min-width: $tablet-width) {
-  .table__header {
-    @include min-size (154px, 75px);
-
-    &--charact {
-      @include visualy-hidden;
-    }
-  }
-
   .table__cell {
-    @include min-size (152px, 45px);
-
-    &--charact {
-
+    @include size (152px, 45px);
     }
+
+  .table__cell--base {
+    @include size (152px, 45px);
+
+    display: table-cell;
   }
 
-  .table__column {
-
-    &--charact {
-      display: block;
-    }
+  .table__header .table__cell {
+    @include size (154px, 75px);
   }
 
+  .table__header .table__cell--base {
+    @include size (154px, 75px);
+
+    display: table-cell;
+    @include visualy-hidden;
+  }
+
+  .table__cell .tariff {
+    @include flex (row, center, center, nowrap);
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .table__cell {
+    @include size (233px, 59px);
+  }
+
+  .table__cell--base {
+    @include size (233px, 59px);
+  }
+
+    .table__header .table__cell {
+      @include size (233px, 94px);
+    }
+
+    .table__header .table__cell--base {
+      @include size (233px, 94px);
+    }
 }

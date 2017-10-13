@@ -3,6 +3,8 @@
   padding-top: 60px;
   padding-bottom: 50px;
   margin-bottom: 50px;
+  overflow: hidden;
+  @include padding-lr (20px);
 }
 
 .price__tittle {
@@ -14,13 +16,24 @@
 }
 
 .price__wrapper {
-  overflow: hidden;
-  display: flex;
-  justify-content: center; /*положение таблицы*/
+  width: 300%;
+  // transform: rotateX(-33%);
+  // display: flex;
+  // justify-content: center; /*положение таблицы*/
 }
 
 @media (min-width: $tablet-width) {
   .price__wrapper {
-    width: 616px;
+    width: $tablet-width - 20px -20px;
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .price {
+    @include padding-lr ($padding-desktop);
+  }
+
+  .price__wrapper {
+    width: $desktop-width - $padding-desktop - $padding-desktop;
   }
 }

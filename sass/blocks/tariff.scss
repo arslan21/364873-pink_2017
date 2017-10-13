@@ -1,7 +1,10 @@
 .tariff {
-  text-transform: uppercase;
+  padding-top: 10px;
+  @include padding-lr (13px);
+}
 
-  @include list-style-none;
+.tariff .tariff__name {
+  text-transform: uppercase;
 
   &--hit {
     background-image: url("../img/bg-hit.svg");
@@ -11,6 +14,7 @@
 
 .tariff__name {
   @include font($font-size-medium, 30px, 700, $contrast-font-color);
+  width: 100%
 }
 
 .tariff__price {
@@ -20,7 +24,6 @@
 .tariff__property {
   @include font($font-size-normal, 30px, 400, $main-font-color);
 }
-
 
 .tariff__exist {
   display: block;
@@ -38,11 +41,11 @@
 }
 
 @media (min-width: $tablet-width) {
-  .tariff__property {
+  .table__cell .tariff__property {
     display: none;
+  }
 
-    &--charact {
-      display: block;
-    }
+  .table__cell--base .tariff__property {
+    display: table-cell;
   }
 }
