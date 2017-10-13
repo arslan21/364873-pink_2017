@@ -1,42 +1,48 @@
 .popup {
+  margin: 0 auto;
+  padding-top: 37px;
+
+  @include min-size ($mobile-width, 319px);
   background-color: $page-color;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
-  padding-top: 37px;
   text-align: center;
-  @include min-size ($mobile-width, 319px);
-  margin: 0 auto;
 }
 
 
 .poppup__background {
-  @include min-size ($popup-mobile-width, 163px);
-  background-color: $card-color;
   padding-top: 50px;
   padding-bottom: 54px;
   margin-bottom: 0;
+
+  @include min-size ($popup-mobile-width, 163px);
+  background-color: $card-color;
 }
 
 .popup__tittle {
-  @include font($font-size-medium, 24px, 700, $name-font-color);
   padding-bottom: 14px;
+
+  @include font($font-size-medium, 24px, 700, $name-font-color);
 }
 
 .popup__message {
-  @include font($font-size-normal, 24px, 400, $main-font-color);
   @include margin-lr (22px);
   margin-bottom: 40px;
+
+  @include font($font-size-normal, 24px, 400, $main-font-color);
 }
 
 .popup__button {
   padding-top: 14px;
-  @include font($font-size-medium, 30px, 700, $contrast-font-color);
+
   @include min-size ($mobile-width - 22px *2, 63px); /*@include margin-lr (22px);*/
+  @include font($font-size-medium, 30px, 700, $contrast-font-color);
 }
 
 @media (min-width: $tablet-width) {
   .popup {
-    @include min-size ($popup-tablet-width, 396px);
     margin: 0 auto;
+
+    @include min-size ($popup-tablet-width, 396px);
   }
 
   .popup__tittle {
@@ -44,8 +50,8 @@
   }
 
   .popup__message {
-    @include font($font-size-medium, 24px, 400, $main-font-color);
     @include margin-lr (88px);
+    @include font($font-size-medium, 24px, 400, $main-font-color);
   }
 
   .poppup__background {
@@ -54,7 +60,6 @@
 }
 
 @media (min-width: $min-desktop-width) {
-
   .popup.popup--sent {
     @include size (729px, 380px);
   }

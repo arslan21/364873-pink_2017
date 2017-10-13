@@ -22,12 +22,11 @@
 .form__contacts,
 .form__your-app,
 .form__description {
-  border: none;
-  padding-bottom: 44px;
-  @include padding-lr (22px);
-  text-align: left;
   @include flex (column, flex-start, flex-start, nowrap);
-
+  @include padding-lr (22px);
+  padding-bottom: 44px;
+  text-align: left;
+  border: none;
 }
 
 .form__label-text {
@@ -43,10 +42,11 @@
 
 .form__text {
   display: block;
-  background-color: inherit;
+
   @include font($font-size-normal, 18px, 400, $contacts-font-color);
   text-transform: uppercase;
   text-align: center;
+  background-color: inherit;
   // position: absolute;
   // left: 50%;
   // top: 0%;
@@ -67,26 +67,27 @@
 }
 
 .form__textarea {
-  @include font($font-size-medium, 30px, 400, $main-font-color);
   @include size (276px, 197px);
-  margin-top: 19px
+  margin-top: 19px;
+
+  @include font($font-size-medium, 30px, 400, $main-font-color);
 }
 
 .form__small {
+  margin-bottom: 24px;
+
   @include font($font-size-normal, 30px, 400, $main-font-color);
   text-transform: uppercase;
-  margin-bottom: 24px;
 }
 
 .form__button {
-  @include font($font-size-medium, 30px, 700, $contrast-font-color);
   @include min-size ($mobile-width - 22px *2, 63px); /*@include margin-lr (22px);*/
+  @include font($font-size-medium, 30px, 700, $contrast-font-color);
 }
 
 @media (min-width: $tablet-width) {
   .form {
     @include flex (row, center, baseline, wrap);
-
   }
 
   .form__name .form__label-text {
@@ -104,27 +105,28 @@
   .form__contacts,
   .form__your-app,
   .form__description {
-    background-color: $page-color;
     @include padding-lr (0);
     @include padding-tb (0);
     margin-bottom: 50px;
     min-width: $tablet-width - $padding-form *2;
+    background-color: $page-color;
   }
 
   .form__achievements,
   .form__contacts,
   .form__your-app,
   .form__description {
-    @include padding-tb (50px);
-    border: 2px solid #e5e5e5;
     position: relative;
+
+    @include padding-tb (50px);
     // min-width: $tablet-width - $padding-form - $padding-form;
+    border: 2px solid #e5e5e5;
 
     & .form__text {
-      display: block;
       position: absolute;
       left: 50%;
       top: 0%;
+      display: block;
       padding-top: 0;
       width: auto;
       white-space: nowrap;
@@ -141,18 +143,14 @@
   }
 
   .form__contacts {
+    padding-bottom: 0;
     order: -8;
-    padding-bottom: 0px;
-  }
-
-  .form__your-app {
-
   }
 
   .form__label-radio {
-    padding-top: 0;
-    margin-bottom: 37px;
     @include padding-lr ($margin-form);
+    margin-bottom: 37px;
+    padding-top: 0;
 
     &:last-child {
       margin-bottom: 0;
@@ -169,9 +167,6 @@
     margin: 0 auto;
     padding-top: 0;
     margin-bottom: 37px;
-
-    &:last-child {
-    }
   }
 
   .form__contacts .form__input-text {
@@ -181,9 +176,9 @@
   }
 
   .form__label-checkbox {
+    @include padding-lr ($margin-form);
     padding-top: 0;
     margin-bottom: 37px;
-    @include padding-lr ($margin-form);
 
     &:last-child {
       margin-bottom: 0;
@@ -238,8 +233,8 @@
 
   .form__contacts .form__label-text {
     @include flex (column, flex-start, flex-start, nowrap);
-    width: 371px;
     @include margin-lr ($margin-form);
+    width: 371px;
   }
 
   .form__contacts .form__input-text {
@@ -250,7 +245,6 @@
   .form__contacts,
   .form__description {
     min-width: $desktop-width - $padding-desktop * 2;
-
   }
 
   .form__name .form__label-text {
@@ -266,5 +260,4 @@
   .form__small {
     margin-bottom: 0;
   }
-
 }

@@ -1,14 +1,9 @@
 .information {
   background-color: $card-color;
-
 }
 
 .information__tittle {
   @include visualy-hidden;
-}
-
-.information__list,
-.information__image {
 }
 
 @media (min-width: $tablet-width) {
@@ -25,17 +20,11 @@
 @media (min-width: $min-desktop-width) {
   .information {
     @include flex (column, flex-start, stretch, nowrap);
-    @include min-size ($desktop-width, 610px);
     @include padding-lr ($padding-desktop);
+    @include min-size ($desktop-width, 610px);
   }
 
   .information__image {
     @include flex (row, center, flex-start, wrap);
   }
-
-  .information__list {
-
-  }
-
-
 }

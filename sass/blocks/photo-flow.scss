@@ -1,9 +1,10 @@
 .photo-flow {
-  margin-top: -14px;
-  background-color: $page-color;
   z-index: 3;
+
   @include padding-lr ($padding-photo-flow);
+  margin-top: -14px;
   opacity: 0.99;
+  background-color: $page-color;
   // padding-top: 54px;
 }
 
@@ -12,8 +13,8 @@
 }
 
 .photo-flow__list {
-  @include list-style-none;
   @include zero-indent;
+  @include list-style-none;
 }
 
 .photo-flow__item {
@@ -22,10 +23,11 @@
 }
 
 .photo-flow__footer {
-  @include font($font-size-normal, 30px, 400, $main-font-color);
   @include padding-lr (15px);
   padding-top: 10px;
   margin-bottom: 40px;
+
+  @include font($font-size-normal, 30px, 400, $main-font-color);
 }
 
 @media (min-width: $tablet-width) {
@@ -47,23 +49,21 @@
     }
 
     &:nth-child(2n-1) {
-      margin-right: 0px;
+      margin-right: 0;
     }
   }
 
   .photo-flow__footer {
-    @include font($font-size-medium, 30px, 400, $main-font-color);
     @include padding-lr (100px);
     margin-bottom: 70px;
+
+    @include font($font-size-medium, 30px, 400, $main-font-color);
   }
 }
 
 @media (min-width: $min-desktop-width) {
   .photo-flow {
     @include padding-lr ($padding-desktop);
-  }
-
-  .photo-flow__list {
   }
 
   .photo-flow__item {
@@ -84,7 +84,7 @@
     }
 
     &:nth-child(3n + 1) {
-      margin-right: 0px;
+      margin-right: 0;
     }
   }
 

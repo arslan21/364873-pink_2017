@@ -1,14 +1,14 @@
 .preview {
   @include padding-lr(22px);
-  min-height: 185px;
   margin-top: -18px;
-  margin-bottom: 0;
-  background-color: $page-color;
   padding-top: 40px;
+  margin-bottom: 0;
+  min-height: 185px;
+  background-color: $page-color;
 
-  &--main{
-  margin-top: 0;
-  min-height: 230px;
+  &--main {
+    margin-top: 0;
+    min-height: 230px;
   }
 }
 
@@ -18,32 +18,30 @@
   &--main {
     @include font($font-size-big, 36px, 300, $main-font-color);
     display: block;
-    }
+  }
 }
 
 @media (min-width: $tablet-width) {
   .preview {
+    @include flex (row, center, stretch, nowrap);
     @include padding-lr (0);
     padding-top: 90px;
     min-height: 228px;
-    @include flex (row, center, stretch, nowrap);
-
 
     &--main {
-      margin-top: 0;
-      padding-top: 0px;
       @include flex (column, center, center, nowrap);
+      margin-top: 0;
+      padding-top: 0;
     }
   }
 
   .preview__text {
-      @include padding-lr (85px);
-      @include font($font-size-medium, 30px, 400, $main-font-color);
+    @include padding-lr (85px);
+    @include font($font-size-medium, 30px, 400, $main-font-color);
 
-      &--main {
-        @include font(40px, 50px, 300, $main-font-color);
-        @include padding-lr (22px);
-
+    &--main {
+      @include padding-lr (22px);
+      @include font(40px, 50px, 300, $main-font-color);
     }
 
     &--main:last-child {
@@ -59,11 +57,10 @@
     min-height: 322px;
 
     &--main {
-      margin-top: 0;
-      padding-top: 0px;
       @include flex (column, center, center, nowrap);
+      margin-top: 0;
+      padding-top: 0;
     }
-
   }
 
   .preview__text {

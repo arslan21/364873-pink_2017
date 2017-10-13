@@ -2,9 +2,11 @@
   @include flex (row, space-around, stretch, nowrap);
   margin-bottom: 76px;
 }
+
 .editor__item {
-  @include size(48px, 44px);
   position: relative;
+
+  @include size(48px, 44px);
   background-repeat: no-repeat;
 
   &--corp {
@@ -27,17 +29,21 @@
   }
 
   &::before {
-    @include size (240px, 2px);
     bottom: -34px;
+
+    @include size (240px, 2px);
     background-color: black;
   }
+
   &::after {
-    @include size (14px, 14px);
     bottom: -40px;
+
+    @include size (14px, 14px);
     background-image: url("../img/icon-editor-diagram-fill.svg");
     background-repeat: no-repeat;
     background-size: contain;
   }
+
   &--active::before,
   &--active::after {
     display: block;
@@ -49,18 +55,22 @@
 
   &::before {
     content: "";
-    @include size (240px, 2px);
     bottom: -34px;
+
+    @include size (240px, 2px);
     background-color: black;
   }
+
   &::after {
     content: "";
-    @include size (14px, 14px);
     bottom: -40px;
+
+    @include size (14px, 14px);
     background-image: url("../img/icon-editor-diagram-fill.svg");
     background-repeat: no-repeat;
     background-size: contain;
   }
+
   &--active::before,
   &--active::after {
     display: block;
@@ -73,14 +83,15 @@
     // min-height: ;
     // width: $tablet-width / 2 - $padding-photo-flow - 9px;
     padding-left: 15px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .editor__item {
     display: block;
+
     @include size (275px, $slider-item-height);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 13px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
     &::before,
     &::after {
@@ -105,9 +116,6 @@
   .editor__item {
     @include size (410px, $slider-item-height);
 
-  }
-
-  .editor__item {
     &::before {
       @include size (290px, 2px);
     }

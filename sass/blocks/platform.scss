@@ -1,17 +1,18 @@
 .platform {
-  @include zero-indent;
+  @include flex (row, space-between, stretch, wrap);
   @include margin-tb (32px);
   @include padding-lr (38px);
   margin-top: 32px;
   margin-bottom: 32px;
 
-  @include flex (row, space-between, stretch, wrap);
+  @include zero-indent;
 }
 
 .platform__item {
-  @include list-style-none;
   @include size(56px, 56px);
   background-repeat: no-repeat;
+
+  @include list-style-none;
 }
 
 .platform__link {

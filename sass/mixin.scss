@@ -9,37 +9,6 @@
   border: 0;
 }
 
-@mixin zero-indent {
-  margin: 0;
-  padding: 0;
-}
-
-@mixin list-style-none {
-  @include zero-indent;
-  list-style: none;
-}
-
-@mixin link-decoration {
-  text-decoration: none;
-}
-
-@mixin font($font-size: $font-size-normal, $line-height: $font-size * 1.2, $font-weight: 400, $font-color: $main-font-color) {
-  font-size: $font-size;
-  line-height: $line-height;
-  font-weight: $font-weight;
-  color: $font-color;
-}
-
-@mixin size ($width, $height) {
-  width: $width;
-  height: $height;
-}
-
-@mixin min-size ($width, $min-height) {
-  width: $width;
-  min-height: $min-height;
-}
-
 @mixin flex ($flex-direction, $justify-content, $align-items, $wrap) {
   display: flex;
   flex-direction: $flex-direction;
@@ -67,4 +36,35 @@
 @mixin margin-tb ($margin-top-bottom) {
   margin-top: $margin-top-bottom;
   margin-bottom: $margin-top-bottom;
+}
+
+@mixin size ($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin min-size ($width, $min-height) {
+  width: $width;
+  min-height: $min-height;
+}
+
+@mixin font($font-size: $font-size-normal, $line-height: $font-size * 1.2, $font-weight: 400, $font-color: $main-font-color) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  color: $font-color;
+}
+
+@mixin zero-indent {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin list-style-none {
+  @include zero-indent;
+  list-style: none;
+}
+
+@mixin link-decoration {
+  text-decoration: none;
 }

@@ -1,10 +1,10 @@
 .price {
-  background-color: $card-color;
+  @include padding-lr (20px);
   padding-top: 60px;
   padding-bottom: 50px;
   margin-bottom: 50px;
   overflow: hidden;
-  @include padding-lr (20px);
+  background-color: $card-color;
 }
 
 .price__tittle {

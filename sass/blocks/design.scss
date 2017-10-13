@@ -9,11 +9,11 @@
 
 .design__link {
   display: block;
+  margin-left: 15px;
 
   @include size(27px, 34px);
   background-repeat: no-repeat;
   background-image: url("../img/logo-htmlacademy.svg");
-  margin-left: 15px;
 
   & p {
     @include visualy-hidden;

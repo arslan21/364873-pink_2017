@@ -1,20 +1,20 @@
 .intro {
+  position: relative;
+
+  @include min-size (320px, 171px);
+  padding-top: 30px;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 50% -66px;
 
-  @include min-size (320px, 171px);
-  padding-top: 30px;
-  position: relative;
-
-  &--main{
+  &--main {
     @include flex (column, flex-end, stretch, nowrap);
   }
 }
 
 .intro__tittle {
-  @include font($font-size-big, 34px, 300, $contrast-font-color);
   @include padding-lr (34px);
+  @include font($font-size-big, 34px, 300, $contrast-font-color);
 
   &--main {
     @include visualy-hidden;
@@ -23,18 +23,19 @@
 
 .intro__slogan {
   display: none;
+
   @include font(40px, 60px, 300, $contrast-font-color);
 }
 
 @media (min-width: $tablet-width) {
   .intro {
+    display: block;
+    padding-top: 45px;
+
     @include min-size ($tablet-width, 330px);
     background-image: url("../img/back-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: 50% -110px;
-    display: block;
-
-    padding-top: 45px;
 
     &--main {
       background-image: url("../img/back-tablet@1x.jpg");
@@ -54,41 +55,38 @@
   .intro__slogan {
     display: block;
 
-    @include size (312px, 185px );
-}
+    @include size (312px, 185px);
+  }
 
   .intro__image {
-    // order: 2;
-    @include size (480px, 550px);
     position: absolute;
     left: 0%;
     bottom: 0%;
+
+    @include size (480px, 550px);
     transform: translate(33%);
   }
 }
 
 @media (min-width: $min-desktop-width) {
   .intro {
+    @include min-size ($desktop-width, 286px);
     background-image: url("../img/back-desktop.jpg");
     background-repeat: no-repeat;
     background-position: 50% -110px;
 
-    @include min-size ($desktop-width, 286px);
-
     &--main {
       @include min-size ($desktop-width, 743px);
-      padding-top: 110px;
       @include padding-lr (109px);
+      padding-top: 110px;
     }
   }
 
   .intro__image {
-    // order: 2;
     @include size (700px, 640px);
   }
 
   .intro__tittle {
     @include padding-lr ($padding-desktop);
-
   }
 }

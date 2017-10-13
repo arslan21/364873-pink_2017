@@ -1,11 +1,12 @@
 .form-button {
-  @include link-decoration;
   display: block;
-  text-transform: uppercase;
+  margin: 0 auto;
   border: 2px solid $form-button-color;
   background-color: $form-button-color;
+
+  @include link-decoration;
+  text-transform: uppercase;
   text-align: center;
-  margin: 0 auto;
 }
 
 .round-button {

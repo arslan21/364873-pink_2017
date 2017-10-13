@@ -1,31 +1,26 @@
 .contest {
-  background-color: inherit;
+  z-index: 3;
   margin-top: -14px;
   margin-bottom: 30px;
-  background-color: $page-color;
-  z-index: 3;
   padding-top: 24px;
+  background-color: $page-color;
 }
 
 .contest__tittle {
-  @include visualy-hidden
-}
-
-.cotnest__form {
-  // padding-top: 49px;
+  @include visualy-hidden;
 }
 
 @media (min-width: $tablet-width) {
   .contest {
-    padding-top: 0;
     @include padding-lr (22px);
+    padding-top: 0;
   }
 }
 
 @media (min-width: $tablet-width) {
   .contest {
-    padding-top: 0;
     @include padding-lr ($padding-desktop);
+    padding-top: 0;
     margin-bottom: 0;
   }
 }

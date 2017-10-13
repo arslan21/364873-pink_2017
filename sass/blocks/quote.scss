@@ -1,5 +1,6 @@
 .quote__profession {
   display: none;
+
   @include padding-tb (0);
 }
 
@@ -27,8 +28,6 @@
   .quote__profession {
     display: block;
   }
-
-
 }
 
 @media (min-width: $min-desktop-width) {

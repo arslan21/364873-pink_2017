@@ -39,20 +39,21 @@
 
   &--panorama {
     @include size ($mobile-width, 137px);
-    transform: translateX(0px-$padding-photo-flow);
+
+    transform: translateX(0 - $padding-photo-flow);
   }
 }
-
+//
 //.post__likes {
 //}
 
 @media (min-width: $tablet-width) {
   .post__wrapper {
-    min-height: 155px;
-    margin-top: -5px;
+    @include flex (column, space-between, stretch, nowrap);
     @include padding-lr (28px);
     @include padding-tb (24px);
-    @include flex (column, space-between, stretch, nowrap);
+    margin-top: -5px;
+    min-height: 155px;
   }
 
   .post__likes,
@@ -61,7 +62,7 @@
   }
 
   .post__text {
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   .post__image {
@@ -79,12 +80,7 @@
 
     &--panorama {
       @include size ($desktop-width, 506px);
-    }
-  }
-
-  .post__image {
-    &--panorama {
-      transform: translateX(0px-$padding-desktop);
+      transform: translateX(0 - $padding-desktop);
     }
   }
 }

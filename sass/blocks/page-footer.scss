@@ -1,15 +1,12 @@
 .page-footer {
+  @include flex (column, flex-start, stretch, nowrap);
   @include padding-lr (34px);
   padding-top: 40px;
-
-  @include flex (column, flex-start, stretch, nowrap);
 }
 
 .page-footer > * {
   margin: 0 auto;
 }
-
-.page-footer__social {}
 
 .page-footer__logo {
   display: block;
@@ -23,24 +20,22 @@
 
 @media (min-width: $tablet-width) {
   .page-footer {
+    @include flex (row, space-between, center, nowrap);
+    @include padding-lr (20px);
     min-height: 127px;
 
-    @include flex (row, space-between, center, nowrap);
     @include zero-indent;
-    @include padding-lr (20px);
     background-color: $page-color;
   }
 
   .page-footer > * {
     @include zero-indent;
-
   }
 }
 
 @media (min-width: $min-desktop-width) {
   .page-footer {
-    min-height: 197px;
-
     @include padding-lr ($padding-desktop);
+    min-height: 197px;
   }
 }

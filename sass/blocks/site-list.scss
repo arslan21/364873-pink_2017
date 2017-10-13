@@ -1,20 +1,20 @@
 .site-list {
-  text-transform: uppercase;
-
   @include zero-indent;
+  text-transform: uppercase;
 }
 
 .site-list__item {
-  @include list-style-none;
   background-color: $menu-main-color;
   box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
+
+  @include list-style-none;
 
   & a {
     display: block;
 
+    @include padding-tb (18px);
     @include font($font-size-medium, 32px, 700, $contrast-font-color);
     @include link-decoration;
-    @include padding-tb (18px);
     text-align: center;
   }
 }

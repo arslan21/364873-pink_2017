@@ -15,15 +15,14 @@
   display: table-header-group;
 }
 
-
-
 .table__cell {
+  display: table-cell;
   width: 276px;
   height: 65px;
   border: 2px solid #e5e5e5;
   background-color: $page-color;
-  display: table-cell;
 }
+
 .table__cell--base {
   display: none;
   border: 2px solid #e5e5e5;
@@ -31,16 +30,12 @@
 }
 
 .table__header .table__cell,
-.table__header .table__cell--base  {
+.table__header .table__cell--base {
   display: table-cell;
   width: 33%;
   height: 98px;
   border: 2px solid #e5e5e5;
   background-color: $main-font-color;
-}
-
-.table__cell--base {
-  display: none;
 }
 
 .table__cell .tariff {
@@ -54,11 +49,10 @@
 @media (min-width: $tablet-width) {
   .table__cell {
     @include size (152px, 45px);
-    }
+  }
 
   .table__cell--base {
     @include size (152px, 45px);
-
     display: table-cell;
   }
 
@@ -67,9 +61,9 @@
   }
 
   .table__header .table__cell--base {
-    @include size (154px, 75px);
-
     display: table-cell;
+
+    @include size (154px, 75px);
     @include visualy-hidden;
   }
 
@@ -87,11 +81,11 @@
     @include size (233px, 59px);
   }
 
-    .table__header .table__cell {
-      @include size (233px, 94px);
-    }
+  .table__header .table__cell {
+    @include size (233px, 94px);
+  }
 
-    .table__header .table__cell--base {
-      @include size (233px, 94px);
-    }
+  .table__header .table__cell--base {
+    @include size (233px, 94px);
+  }
 }

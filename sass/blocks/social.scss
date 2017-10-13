@@ -9,10 +9,10 @@
 
 .social__social-button {
   display: block;
-  border: 3px solid $card-color;
-  border-radius: 50%;
 
   @include size(51px, 51px);
+  border: 3px solid $card-color;
+  border-radius: 50%;
   background-repeat: no-repeat;
   background-position: 50%;
 

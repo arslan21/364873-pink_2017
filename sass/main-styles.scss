@@ -1,22 +1,18 @@
 html,
 .body {
   font-family: "Open Sans", "Arial", sans-serif;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 320px;
 
   @include font($font-size-normal, 18px, 300, $main-font-color);
   background-color: $page-color;
-  box-sizing: border-box;
-  margin: 0 auto;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
-}
-
-html,
-.body {
-  width: 320px;
 }
 
 @media (min-width: $tablet-width) {

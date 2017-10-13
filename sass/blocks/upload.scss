@@ -24,14 +24,16 @@
 }
 
 .upload__buttons {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
   @include padding-tb (38px);
   // @include padding-lr (39px);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .upload__button {
-  @include font($font-size-normal, 18px, 700, $contacts-font-color);
   margin-bottom: 12px;
+
+  @include font($font-size-normal, 18px, 700, $contacts-font-color);
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -41,6 +43,7 @@
   .upload {
     padding-top: 57px;
     padding-bottom: 54px;
+
     @include size ($tablet-width, 511px);
   }
 
@@ -55,19 +58,18 @@
   }
 
   .upload__buttons {
-    border-top: none;
     @include padding-tb (0);
     // @include padding-lr (39px);
+    border-top: none;
   }
 }
 
 @media (min-width: $min-desktop-width) {
   .upload {
     @include margin-lr ($padding-desktop);
-    @include size ($desktop-width - $padding-desktop * 2, 511px);
     @include padding-tb (57px);
     @include padding-lr (80px);
-
+    @include size ($desktop-width - $padding-desktop * 2, 511px);
   }
 
   .upload__editor {
@@ -86,14 +88,12 @@
   }
 
   .upload__buttons .upload__button {
-    width: 183px;
     @include margin-tb (0);
     @include margin-lr (44px);
+    width: 183px;
 
     &:nth-child(2n) {
       @include margin-lr (0);
-
     }
-
   }
 }

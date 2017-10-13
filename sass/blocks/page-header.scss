@@ -33,24 +33,24 @@
       position: absolute;
       left: 20px;
       top: 27px;
+
       @include size (147px, 40px);
       background-image: url("../img/logo-pink-blue-mobile.svg");
       background-repeat: no-repeat;
-      // background-position: center;
     }
   }
+
   .page-header__logo-image {
     // display: none;
     @include visualy-hidden;
-
   }
 }
 
 @media (min-width: $min-desktop-width) {
   .page-header {
     @include flex (row, space-between, center, nowrap);
-    @include min-size ($desktop-width, 110px)
     @include padding-lr ($padding-desktop);
+    @include min-size ($desktop-width, 110px);
     // background-color: transparent;
     // background-color: transparentize($menu-main-color, 0.3);
     opacity: 0.3;
