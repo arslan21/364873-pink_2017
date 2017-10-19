@@ -1,24 +1,35 @@
 .information {
-  margin-bottom: 50px;
+  background-color: $card-color;
 }
 
 .information__tittle {
   @include visualy-hidden;
 }
 
-.information__question {
-  // background-color: $page-color;
+@media (min-width: $tablet-width) {
+  .information__wrapper {
+    @include flex (row, space-between, stretch, wrap);
+    @include padding-lr (3.33%);
+  }
+
+  .information__image {
+    order: -1;
+  }
 }
 
-.information__text {
-  display: block;
+@media (min-width: $min-desktop-width) {
+  .information {
+    @include flex (row, center, stretch, nowrap);
+  }
 
-  @include font($font-size-big, 18px, 300, $main-font-color);
-}
+  .information__wrapper {
+    @include flex (column, flex-start, stretch, nowrap);
+    @include padding-lr ($padding-desktop);
+    @include min-size ($desktop-width, 610px);
+    background-color: $card-color;
+  }
 
-.information__list,
-.information__image-background {
-  background-color: $card-color;
-  margin-top: 0;
-  margin-bottom: 0;
+  .information__image {
+    @include flex (row, center, flex-start, wrap);
+  }
 }

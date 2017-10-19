@@ -1,3 +1,29 @@
 .map {
-  // margin-top: -200px;
+  width: 100%;
+}
+
+.map__wrapper {
+  @include min-size (100%, 420px);
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .map {
+    margin-top: 0;
+    height: 380px;
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .map {
+    @include wrapper-flex;
+    margin-top: 0;
+    height: 520px;
+  }
+
+  .map__wrapper {
+    width: $desktop-width;
+  }
 }

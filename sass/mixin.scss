@@ -1,19 +1,3 @@
-$main-font-color: #283645;
-$contrast-font-color: #ffffff;
-$contacts-font-color: #d22856;
-$name-font-color: #000000;
-$form-button-color: #2aab6d;
-
-$font-size-normal: 14px;
-$font-size-little: $font-size-normal - 2px;
-$font-size-medium: $font-size-normal + 4px;
-$font-size-big: $font-size-normal + 10px;
-
-$page-color: #ffffff;
-$menu-main-color: #283446;
-$card-color: #f2f2f2;
-
-
 @mixin visualy-hidden {
   position: absolute;
   overflow: hidden;
@@ -25,26 +9,41 @@ $card-color: #f2f2f2;
   border: 0;
 }
 
-@mixin zero-indent {
-  margin: 0;
-  padding: 0;
+@mixin flex ($flex-direction, $justify-content, $align-items, $wrap) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-wrap: $wrap;
+  /*@include flex (row, flex-start, stretch, nowrap);*/
 }
 
-@mixin list-style-none {
-  @include zero-indent;
-  list-style: none;
+@mixin wrapper-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
 }
 
-
-@mixin link-decoration {
-  text-decoration: none;
+@mixin padding-lr ($padding-left-right) {
+  padding-left: $padding-left-right;
+  padding-right: $padding-left-right;
 }
 
-@mixin font($font-size: $font-size-normal, $line-height: $font-size * 1.2, $font-weight: 400, $font-color: $main-font-color) {
-  font-size: $font-size;
-  line-height: $line-height;
-  font-weight: $font-weight;
-  color: $font-color;
+@mixin padding-tb ($padding-top-bottom) {
+  padding-top: $padding-top-bottom;
+  padding-bottom: $padding-top-bottom;
+}
+
+@mixin margin-lr ($margin-left-right) {
+  margin-left: $margin-left-right;
+  margin-right: $margin-left-right;
+}
+
+@mixin margin-tb ($margin-top-bottom) {
+  margin-top: $margin-top-bottom;
+  margin-bottom: $margin-top-bottom;
 }
 
 @mixin size ($width, $height) {
@@ -57,14 +56,23 @@ $card-color: #f2f2f2;
   min-height: $min-height;
 }
 
-// @mixin menu-font-size {
-//   font-size: $font-size + 4px;
-//   font-weight: 700;
-//   color: $menu-font-color;
-// }
-//
-// @mixin slogan-size {
-//   font-size: $font-size+10px;
-//   font-weight: 300;
-//   color: $menu-font-color;
-// }
+@mixin font($font-size: $font-size-normal, $line-height: $font-size * 1.2, $font-weight: 400, $font-color: $main-font-color) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  color: $font-color;
+}
+
+@mixin zero-indent {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin list-style-none {
+  @include zero-indent;
+  list-style: none;
+}
+
+@mixin link-decoration {
+  text-decoration: none;
+}

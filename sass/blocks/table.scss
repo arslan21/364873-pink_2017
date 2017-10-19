@@ -1,24 +1,104 @@
+.table__wrapper {
+  // display: flex;
+  // justify-content: center; /*положение таблицы*/
+  width: 100%;
+}
+
 .table {
   display: table;
   border-collapse: collapse;
+  width: 100%;
 }
+
 
 .table__caption {
   display: table-caption;
 }
 
-.table__column {
-  display: table-cell;
+.table__row {
+  @include zero-indent;
+  display: table-row;
 }
 
-.table__header {
+.table__row.table__header {
   display: table-header-group;
-  border: 2px solid $main-font-color;
+}
+
+.table__header .table__cell,
+.table__header .table__cell--base {
+  display: table-cell;
+  width: 33%;
+  height: 98px;
+  border: 2px solid #e5e5e5;
   background-color: $main-font-color;
 }
 
 .table__cell {
-  // display: table-cell;
+  display: table-cell;
+  height: 65px;
   border: 2px solid #e5e5e5;
   background-color: $page-color;
+}
+
+
+.table__cell .tariff {
+  @include flex (row, space-between, center, nowrap);
+}
+
+.table__header .table__cell .tariff {
+  @include flex (row, center, center, wrap);
+}
+
+.table .table__cell--base {
+  display: none;
+  border: 2px solid #e5e5e5;
+  background-color: $page-color;
+}
+
+@media (min-width: $tablet-width) {
+  .table .table__cell {
+    @include size (152px, 45px);
+  }
+
+  .table .table__cell--base {
+    @include size (24.8, 45px);
+    display: table-cell;
+  }
+
+  .table__header .table__cell {
+    @include size (24.8%, 75px);
+  }
+
+  .table__header .table__cell--base {
+    display: table-cell;
+
+    @include size (24.8%, 75px);
+    @include visualy-hidden;
+  }
+
+  .table__cell .tariff {
+    @include flex (row, center, center, nowrap);
+  }
+
+  .table__cell--base .tariff {
+    @include flex (row, flex-start, center, nowrap);
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .table__cell {
+    @include size (24.8, 59px);
+  }
+
+  .table__cell .table__cell--base {
+    @include size (24.8, 59px);
+  }
+
+  .table__header .table__cell {
+    @include size (24.8, 94px);
+  }
+
+  .table__header .table__cell--base {
+    @include size (24.8, 94px);
+  }
 }

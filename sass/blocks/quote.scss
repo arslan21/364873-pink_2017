@@ -1,12 +1,43 @@
-//
-//
-//
-//
+.quote__profession {
+  display: none;
+
+  @include padding-tb (0);
+}
+
+
 .quote__author {
   @include font($font-size-medium, 30px, 700, $name-font-color);
   font-style: normal;
 }
 
-.quote__text {
+.quote__text,
+.quote__profession {
   @include font($font-size-normal, 30px, 400, $main-font-color);
+  font-style: normal;
+}
+
+@media (min-width: $tablet-width) {
+  .quote {
+    @include flex (column-reverse, space-between, stretch, nowrap);
+  }
+
+  .quote__author {
+    @include font(20px, 30px, 700, $name-font-color);
+  }
+
+  .quote__profession {
+    display: block;
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .quote__text,
+  .quote__profession {
+    @include font($font-size-medium, 30px, 400, $main-font-color);
+    font-style: normal;
+  }
+
+  .quote__author {
+    @include font(24px, 30px, 700, $name-font-color);
+  }
 }

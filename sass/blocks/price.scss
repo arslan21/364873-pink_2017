@@ -1,8 +1,10 @@
 .price {
-  background-color: $card-color;
-  padding-top: 138px;
+  @include padding-lr (6.25%);
+  padding-top: 60px;
   padding-bottom: 50px;
   margin-bottom: 50px;
+  overflow: hidden;
+  background-color: $card-color;
 }
 
 .price__tittle {
@@ -11,4 +13,35 @@
 
 .price__toggles {
   margin-top: 45px;
+}
+
+.price__wrapper {
+  width: 300%;
+  // transform: rotateX(-33%);
+  // display: flex;
+  // justify-content: center; /*положение таблицы*/
+}
+
+@media (min-width: $tablet-width) {
+  .price {
+    @include padding-lr (3.33%);
+  }
+
+  .price__wrapper {
+    width: 100%;
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .price {
+    @include wrapper-flex;
+    flex-wrap: wrap;
+
+    @include padding-lr (10.8%);
+    // @include padding-lr ($padding-desktop);
+  }
+
+  .price__wrapper {
+    width: 100%;
+  }
 }

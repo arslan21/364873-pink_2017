@@ -1,9 +1,10 @@
 .editor__list {
-  display: flex;
+  @include flex (row, space-around, stretch, nowrap);
+  margin-bottom: 76px;
 }
 
 .editor__item {
-  display: block;
+  position: relative;
 
   @include size(48px, 44px);
   background-repeat: no-repeat;
@@ -19,8 +20,104 @@
   &--contrast {
     background-image: url("../img/icon-editor-contrast.svg");
   }
+
+  &::before,
+  &::after {
+    content: "";
+    display: none;
+    position: absolute;
+  }
+
+  &::before {
+    bottom: -34px;
+
+    @include size (240px, 2px);
+    background-color: black;
+  }
+
+  &::after {
+    bottom: -40px;
+
+    @include size (14px, 14px);
+    background-image: url("../img/icon-editor-diagram-fill.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--active::before,
+  &--active::after {
+    display: block;
+  }
 }
 
-//.editor__slider {
-//
-//}
+.editor__slider {
+  display: none;
+
+  &::before {
+    content: "";
+    bottom: -34px;
+
+    @include size (240px, 2px);
+    background-color: black;
+  }
+
+  &::after {
+    content: "";
+    bottom: -40px;
+
+    @include size (14px, 14px);
+    background-image: url("../img/icon-editor-diagram-fill.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--active::before,
+  &--active::after {
+    display: block;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .editor__list {
+    @include flex (column, space-between, flex-start, nowrap);
+    // min-height: ;
+    // width: $tablet-width / 2 - $padding-photo-flow - 9px;
+    padding-left: 15px;
+    margin-bottom: 0;
+  }
+
+  .editor__item {
+    display: block;
+
+    @include size (275px, $slider-item-height);
+    margin-bottom: 13px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    &::before,
+    &::after {
+      display: block;
+    }
+
+    &::before {
+      right: 0;
+      bottom: 0;
+      transform: translateY(0 - $slider-item-height / 2);
+    }
+
+    &::after {
+      right: 0;
+      bottom: 0;
+      transform: translateY(6px - $slider-item-height / 2);
+    }
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .editor__item {
+    @include size (410px, $slider-item-height);
+
+    &::before {
+      @include size (290px, 2px);
+    }
+  }
+}

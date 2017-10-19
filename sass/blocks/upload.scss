@@ -1,29 +1,100 @@
 .upload {
-  background-color: $card-color;
+  @include wrapper-flex;
+  @include padding-lr (6.25%);
   padding-top: 20px;
-  padding-bottom: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
+  background-color: $card-color;
 }
 
 .upload__tittle {
   @include visualy-hidden;
 }
 
-.upload-image {
+.upload__image {
   display: block;
   margin: 0 auto;
+  margin-bottom: 42px;
 
   @include size(100%, 374px);
-  background-repeat: no-repeat;
-  background-size: auto;
   background-image: url("../img/photo-road-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
 
   & p {
     @include visualy-hidden;
   }
 }
 
+.upload__buttons {
+  @include padding-tb (38px);
+  // @include padding-lr (39px);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .upload__button {
+  margin-bottom: 12px;
+
   @include font($font-size-normal, 18px, 700, $contacts-font-color);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .upload__wrapper {
+    padding-top: 57px;
+    padding-bottom: 54px;
+
+    @include size ($tablet-width, 511px);
+  }
+
+  .upload__editor {
+    @include flex (column, space-between, center, wrap);
+    height: 400px;
+  }
+
+  .upload__image {
+    @include size ($tablet-width / 2 - $padding-photo-flow - 9px, 400px);
+    margin-bottom: 0;
+  }
+
+  .upload__buttons {
+    @include padding-tb (0);
+    // @include padding-lr (39px);
+    border-top: none;
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .upload__wrapper {
+    @include margin-lr ($padding-desktop);
+    @include padding-tb (57px);
+    @include padding-lr (80px);
+    @include size ($desktop-width - $padding-desktop * 2, 511px);
+  }
+
+  .upload__editor {
+    @include flex (column, space-between, center, wrap);
+    height: 400px;
+  }
+
+  .upload__image {
+    @include size (300px, 400px);
+    @include margin-lr (0);
+    // margin-right: 90px;
+  }
+
+  .upload__buttons {
+    @include flex (row, space-between, center, wrap);
+  }
+
+  .upload__buttons .upload__button {
+    @include margin-tb (0);
+    @include margin-lr (44px);
+    width: 183px;
+
+    &:nth-child(2n) {
+      @include margin-lr (0);
+    }
+  }
 }

@@ -1,27 +1,102 @@
 .intro {
+  position: relative;
+
+  @include min-size (100%, 171px);
+  padding-top: 30px;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: 50% -66px;
 
-  @include size(100%, 462px);
-  padding-top: 101px;
-  position: relative;
-  text-align: center;
+  &--main {
+    @include flex (column, flex-end, stretch, nowrap);
+  }
 }
 
 .intro__tittle {
-  @include font($font-size-big, 24px, 300, $contrast-font-color);
+  @include padding-lr (34px);
+  @include font($font-size-big, 34px, 300, $contrast-font-color);
 
   &--main {
     @include visualy-hidden;
   }
 }
 
-.intro__slogan {
-  display: none;
+.intro__image {
+  margin: 0 auto;
+  transform: translateX(-37px);
 }
 
-.intro__image {
-  position: absolute;
-  bottom: 0;
+.intro__slogan {
+  display: none;
+
+  @include font(40px, 60px, 300, $contrast-font-color);
+}
+
+@media (min-width: $tablet-width) {
+  .intro {
+    display: block;
+    padding-top: 45px;
+    min-height: 330px;
+    // @include min-size ($tablet-width, 330px);
+    background-image: url("../img/back-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% -110px;
+
+    &--main {
+      background-image: url("../img/back-tablet@1x.jpg");
+      min-height: 619px;
+      // @include min-size ($tablet-width, 619px);
+      padding-top: 100px;
+
+      @include flex (column, center, stretch, wrap);
+    }
+  }
+
+
+  .intro__tittle {
+    @include font($font-size-tablet-tittle, 50px, 300, $contrast-font-color);
+  }
+
+  .intro__slogan {
+    display: block;
+
+    @include size (312px, 185px);
+  }
+
+  .intro__image {
+    position: absolute;
+    left: 33%;
+    bottom: 0%;
+
+    @include size (480px, 550px);
+    // margin: 0 auto;
+    // transform: translate(37px);
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .intro {
+    min-height: 286px;
+    // @include min-size ($desktop-width, 286px);
+    background-image: url("../img/back-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% -110px;
+
+    &--main {
+      min-height: 743px;
+      // @include min-size ($desktop-width, 743px);
+      @include padding-lr (109px);
+      padding-top: 110px;
+    }
+  }
+
+  .intro__image {
+    left: 40%;
+
+    @include size (700px, 640px);
+  }
+
+  .intro__tittle {
+    @include padding-lr ($padding-desktop);
+  }
 }

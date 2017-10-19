@@ -1,5 +1,9 @@
-//.contacts {
-//}
+.contacts {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 30px;
+  background-color: $page-color;
+}
 
 .contacts__tittle {
   @include visualy-hidden;
@@ -11,23 +15,64 @@
 
 .contacts__adress {
   display: block;
-  margin-top: 18px;
+  margin-top: 10px;
+  background-color: $page-color;
+
+  @include font($font-size-big, 30px, 300, $contacts-font-color);
 }
 
-.adress__phone,
-.adress__mail,
-.adress__post {
+.contacts__phone,
+.contacts__mail,
+.contacts__post,
+.contacts__qustion {
   margin-top: 27px;
 }
 
-.adress__type {
+.contacts__type {
   display: block;
 
   @include font($font-size-medium, 30px, 700, $name-font-color);
 }
 
-.adress__adress {
-  margin-top: 10px;
+@media (min-width: $tablet-width) {
+  .contacts {
+    display: flex;
+  }
 
-  @include font($font-size-big, 30px, 300, $contacts-font-color);
+  .contacts__wrapper {
+    @include flex (row, center, center, wrap);
+    width: 100%;
+  }
+
+  .contacts__text {
+    @include font(40px, 30px, 300, $main-font-color);
+  }
+
+  .contacts__question {
+    @include margin-lr (126px);
+  }
+
+  .contacts__phone,
+  .contacts__mail,
+  .contacts__post, {
+    width: 50%;
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .contacts {
+    @include wrapper-flex;
+  }
+
+  .contacts__wrapper {
+    width: $desktop-width;
+  }
+
+  .contacts__text {
+    @include font(50px, 30px, 400, $main-font-color);
+  }
+
+  .contacts__question {
+    @include margin-lr (350px);
+  }
 }

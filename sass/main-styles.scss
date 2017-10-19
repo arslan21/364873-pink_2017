@@ -1,11 +1,13 @@
-.html,
+html,
 .body {
   font-family: "Open Sans", "Arial", sans-serif;
-
-  @include font($font-size-normal, 18px, 300, $main-font-color);
-  background-color: #ffffff;
   box-sizing: border-box;
   margin: 0 auto;
+  width: 100%;
+  max-width: 2560px;
+
+  @include font($font-size-normal, 18px, 300, $main-font-color);
+  background-color: $page-color;
 }
 
 *,
@@ -13,7 +15,17 @@
 *::after {
   box-sizing: inherit;
 }
-//
-// img {
-//   max-width: 100%;
-// }
+
+@media (min-width: $tablet-width) {
+  html,
+  .body {
+    // width: $tablet-width;
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  html,
+  .body {
+    // width: $desktop-width;
+  }
+}

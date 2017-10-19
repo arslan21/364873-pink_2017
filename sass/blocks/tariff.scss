@@ -1,7 +1,11 @@
 .tariff {
-  text-transform: uppercase;
+  @include padding-lr (13px);
+  padding-top: 10px;
+  text-align: left;
+}
 
-  @include list-style-none;
+.tariff .tariff__name {
+  text-transform: uppercase;
 
   &--hit {
     background-image: url("../img/bg-hit.svg");
@@ -10,7 +14,10 @@
 }
 
 .tariff__name {
+  width: 100%;
+
   @include font($font-size-medium, 30px, 700, $contrast-font-color);
+  text-align: center;
 }
 
 .tariff__price {
@@ -21,12 +28,10 @@
   @include font($font-size-normal, 30px, 400, $main-font-color);
 }
 
-
 .tariff__exist {
   display: block;
 
   @include size(27px, 27px);
-  width: 27px;
   background-repeat: no-repeat;
 
   &--true {
@@ -35,5 +40,15 @@
 
   &--false {
     background-image: url("../img/icon-no.svg");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .table__cell .tariff__property {
+    display: none;
+  }
+
+  .table__cell--base .tariff__property {
+    display: table-cell;
   }
 }

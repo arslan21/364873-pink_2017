@@ -1,13 +1,55 @@
 .advantages {
   @include list-style-none;
+  @include padding-lr (10%);
+  padding-bottom: 30px;
+
   background-color: $card-color;
 }
 
+.advantages__item {
+  @include list-style-none;
+}
+
 .advantages__tittle {
-  @include font($font-size-medium, 24px, 700, $name-font-color);
-  color: black;
+  @include font ($font-size-medium, 24px, 700, $name-font-color);
 }
 
 .advantages__description {
-  @include font($font-size-normal, 24px, 400, $main-font-color);
+  @include font ($font-size-normal, 24px, 400, $main-font-color);
+}
+
+@media (min-width: $tablet-width) {
+  .advantages {
+    @include flex (column, flex-start, flex-end, noerap);
+    @include padding-lr (0);
+    text-align: left;
+  }
+
+  .advantages__wrapper {
+    width: 50%;
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .advantages {
+    @include flex (row, space-between, flex-start, wrap);
+    padding-bottom: 50px;
+    text-align: center;
+  }
+
+  .advantages__wrapper {
+    width: 100%;
+  }
+
+  .advantages__item {
+    flex-basis: 235px;
+  }
+
+  .advantages__tittle {
+    @include font (30px, 30px, 700, $name-font-color);
+  }
+
+  .advantages__description {
+    @include font ($font-size-medium, 30px, 400, $main-font-color);
+  }
 }

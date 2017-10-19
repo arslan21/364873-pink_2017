@@ -1,0 +1,78 @@
+.preview {
+  @include padding-lr(7%);
+  margin-top: -18px;
+  padding-top: 40px;
+  margin-bottom: 0;
+  min-height: 185px;
+  background-color: $page-color;
+
+  &--main {
+    margin-top: 0;
+    min-height: 230px;
+  }
+}
+
+.preview__text {
+  @include font($font-size-normal, 30px, 400, $main-font-color);
+
+  &--main {
+    display: block;
+
+    @include font($font-size-big, 36px, 300, $main-font-color);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .preview {
+    @include flex (row, center, stretch, nowrap);
+    @include padding-lr (0);
+    padding-top: 90px;
+    min-height: 228px;
+
+    &--main {
+      @include flex (column, center, center, nowrap);
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+
+  .preview__text {
+    @include padding-lr (85px);
+    @include font($font-size-medium, 30px, 400, $main-font-color);
+
+    &--main {
+      @include padding-lr (22px);
+      @include font(40px, 50px, 300, $main-font-color);
+    }
+
+    &--main:last-child {
+      width: 390px;
+    }
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .preview {
+    @include padding-lr(15.8%);
+    padding-top: 70px;
+    min-height: 322px;
+
+    &--main {
+      @include flex (column, center, center, nowrap);
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+
+  .preview__text {
+    @include font($font-size-medium, 30px, 400, $main-font-color);
+
+    &--main {
+      @include font($font-size-tablet-tittle, 50px, 300, $main-font-color);
+    }
+
+    &--main:last-child {
+      width: 500px;
+    }
+  }
+}

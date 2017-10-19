@@ -1,15 +1,14 @@
 .platform {
+  @include flex (row, center, stretch, wrap);
   @include zero-indent;
+  @include margin-tb (32px);
   margin-top: 32px;
   margin-bottom: 32px;
-  padding-left: 38px;
-  padding-right: 38px;
-  display: flex;
-  justify-content: center;
 }
 
 .platform__item {
   @include list-style-none;
+  @include margin-lr (18px);
   @include size(56px, 56px);
   background-repeat: no-repeat;
 }

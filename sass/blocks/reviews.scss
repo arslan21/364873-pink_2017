@@ -1,18 +1,47 @@
-//.reviews {
-//}
+.reviews {
+  z-index: 2;
+  margin-top: -50px;
+  margin-bottom: 60px;
+  padding-top: 50px;
+  background-color: $page-color;
+}
 
 .reviews__tittle {
   @include visualy-hidden;
 }
 
+.reviews__wrapper {
+  overflow: hidden;
+}
+
 .reviews__list {
   @include list-style-none;
+  @include flex (row, center, stretch, nowrap);
+  width: 300%;
 }
 
 .reviews__quote {
   @include zero-indent;
+  @include padding-lr (10%);
 }
 
 .reviews__toggles {
   margin-top: 45px;
+}
+
+@media (min-width: $tablet-width) {
+  .reviews__wrapper {
+    overflow: hidden;
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .reviews {
+    padding-top: 180px;
+    min-height: 404px;
+  }
+
+  .reviews__quote {
+    @include margin-lr ($padding-desktop * 2);
+  }
 }

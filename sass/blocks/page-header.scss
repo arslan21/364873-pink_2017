@@ -1,5 +1,12 @@
 .page-header {
   background-color: $menu-main-color;
+  // margin-bottom: -100px;
+  // z-index: 10;
+  // opacity: 0.99;
+}
+
+.page-header__logo {
+  @include link-decoration;
 }
 
 .page-header__logo-image {
@@ -13,4 +20,38 @@
   margin-right: 20px;
   margin-top: 22px;
   margin-bottom: 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__logo {
+    display: block;
+    position: relative;
+    height: 109px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 20px;
+      top: 27px;
+
+      @include size (147px, 40px);
+      background-image: url("../img/logo-pink-blue-mobile.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  .page-header__logo-image {
+    // display: none;
+    @include visualy-hidden;
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .page-header {
+    @include flex (row, center, center, nowrap);
+    @include min-size (100%, 110px);
+    // background-color: transparent;
+    // background-color: transparentize($menu-main-color, 0.3);
+    opacity: 0.3;
+  }
 }

@@ -1,15 +1,33 @@
-.contest {
-  padding-top: 54px;
+.contest__wrapper {
+  z-index: 3;
+  margin-top: -14px;
+  margin-bottom: 30px;
+  padding-top: 24px;
+  background-color: $page-color;
 }
 
 .contest__tittle {
   @include visualy-hidden;
 }
 
-.contest__header-text {
-  @include font($font-size-normal, 30px, 400, $main-font-color);
+@media (min-width: $tablet-width) {
+  .contest__wrapper {
+    @include padding-lr (3.33%);
+    padding-top: 0;
+  }
 }
 
-.cotnest__form {
-  // padding-top: 49px;
+@media (min-width: $min-desktop-width) {
+  .contest {
+    @include wrapper-flex;
+    padding-top: 0;
+    margin-bottom: 0;
+  }
+
+  .contest__wrapper {
+    @include padding-lr (10.8%);
+    padding-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+  }
 }

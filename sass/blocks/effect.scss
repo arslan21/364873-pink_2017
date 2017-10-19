@@ -1,0 +1,72 @@
+.effect__wrapper {
+  display: none;
+  margin-top: 60px;
+  background-color: $page-color;
+}
+
+@media (min-width: $tablet-width) {
+  .effect__wrapper {
+    @include flex (row, flex-start, stretch, wrap);
+    @include min-size (100%, 222px);
+
+    &::before {
+      @include size (238px, 276px);
+      content: "";
+      display: block;
+      margin-left: 70px;
+    }
+  }
+
+  .effect__review {
+    @include flex (column, space-between, stretch, nowrap);
+    width: 50%;
+    text-align: left;
+  }
+
+  .effect__tittle {
+    @include font(30px, 36px, 700, $name-font-color);
+  }
+
+  .effect__text {
+    @include font($font-size-medium, 24px, 400, $main-font-color);
+  }
+
+  .effect__link {
+    @include list-style-none;
+    @include font($font-size-normal, 10px, 400, $contacts-font-color);
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .effect {
+    @include wrapper-flex;
+  }
+
+  .effect__wrapper {
+    @include min-size ($desktop-width, 429px);
+
+    &::before {
+      @include size (298px, 276px);
+    }
+  }
+
+  .effect__review {
+    @include flex (column, center, stretch, nowrap);
+    width: 525px;
+    text-align: left;
+  }
+
+  .effect__tittle,
+  .effect__text {
+    margin-bottom: 20px;
+  }
+
+  .effect__text {
+    @include font($font-size-medium, 30px, 400, $main-font-color);
+  }
+
+  .effect__link {
+    @include font($font-size-medium, 30px, 400, $contacts-font-color);
+  }
+}
