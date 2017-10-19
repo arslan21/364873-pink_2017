@@ -17,6 +17,7 @@
 
   &--main {
     display: block;
+
     @include font($font-size-big, 36px, 300, $main-font-color);
   }
 }

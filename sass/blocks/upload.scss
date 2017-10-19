@@ -1,8 +1,8 @@
 .upload {
+  @include wrapper-flex;
   @include padding-lr (6.25%);
   padding-top: 20px;
   background-color: $card-color;
-  @include wrapper-flex;
 }
 
 .upload__tittle {

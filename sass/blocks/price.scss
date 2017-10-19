@@ -36,6 +36,7 @@
   .price {
     @include wrapper-flex;
     flex-wrap: wrap;
+
     @include padding-lr (10.8%);
     // @include padding-lr ($padding-desktop);
   }

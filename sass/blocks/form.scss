@@ -35,10 +35,11 @@
   width: 100%;
   flex-grow: 1;
   height: 59px;
+
   @include padding-lr (20px);
   @include font($font-size-medium, 30px, 400, $main-font-color);
 }
-//
+
 .form__name .form__text,
 .form__contacts .form__text {
   display: none;
@@ -51,9 +52,6 @@
   text-transform: uppercase;
   text-align: center;
   background-color: inherit;
-  // position: absolute;
-  // left: 50%;
-  // top: 0%;
 }
 
 .form__label-checkbox,
@@ -170,7 +168,7 @@
     padding-top: 0;
     margin-bottom: 37px;
   }
-//
+
   .form__contacts .form__input-text {
     order: -1;
     width: 100%;
@@ -218,7 +216,7 @@
     @include flex (row, space-between, baseline, wrap);
     width: 100%;
   }
-//
+
   .form__name,
   .form__achievements,
   .form__contacts,
@@ -254,10 +252,10 @@
   }
 
   .form__label-checkbox {
-    width: 20.8%;
     @include padding-lr (0);
-    margin-left: 9.38%;
     margin-right: 0;
+    margin-left: 9.38%;
+    width: 20.8%;
 
     &:nth-of-type(3n) {
       margin-right: 9.38%;
@@ -267,7 +265,7 @@
   .form__textarea {
     @include min-size (86.8%, 124px);
   }
-//
+
   .form__button,
   .form__small {
     margin-bottom: 0;
