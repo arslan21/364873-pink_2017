@@ -16,6 +16,10 @@ html,
   box-sizing: inherit;
 }
 
+.visualy-hidden {
+  @include visualy-hidden;
+}
+
 @media (min-width: $tablet-width) {
   html,
   .body {
