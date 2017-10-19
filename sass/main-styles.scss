@@ -16,7 +16,7 @@ html,
   box-sizing: inherit;
 }
 
-.visualy-hidden {
+.visualy-hidden:not(:focus):not(:active) {
   @include visualy-hidden;
 }
 
