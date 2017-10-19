@@ -1,5 +1,5 @@
 .preview {
-  @include padding-lr(22px);
+  @include padding-lr(7%);
   margin-top: -18px;
   padding-top: 40px;
   margin-bottom: 0;
@@ -16,8 +16,8 @@
   @include font($font-size-normal, 30px, 400, $main-font-color);
 
   &--main {
-    @include font($font-size-big, 36px, 300, $main-font-color);
     display: block;
+    @include font($font-size-big, 36px, 300, $main-font-color);
   }
 }
 
@@ -52,7 +52,7 @@
 
 @media (min-width: $min-desktop-width) {
   .preview {
-    @include padding-lr($padding-desktop + 60px);
+    @include padding-lr(15.8%);
     padding-top: 70px;
     min-height: 322px;
 

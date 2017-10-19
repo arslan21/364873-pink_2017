@@ -1,11 +1,7 @@
-.photo-flow {
-  z-index: 3;
-
-  @include padding-lr ($padding-photo-flow);
+.photo-flow__wrapper {
+  @include padding-lr (6.25%);
   margin-top: -14px;
-  opacity: 0.99;
   background-color: $page-color;
-  // padding-top: 54px;
 }
 
 .photo-flow__tittle {
@@ -31,17 +27,21 @@
 }
 
 @media (min-width: $tablet-width) {
+  .photo-flow__wrapper {
+    @include padding-lr (3%);
+  }
+
   .photo-flow__list {
     @include flex (row, center, flex-start, wrap);
   }
 
   .photo-flow__item {
-    flex-basis: ($tablet-width / 2) - $padding-photo-flow * 1.5;
+    flex-basis: 48.35%;
     min-height: 455px;
     margin-right: $padding-photo-flow;
 
     &.post--panorama {
-      width: $tablet-width - $padding-photo-flow * 2;
+      flex-basis: 100%;
     }
 
     &:first-child {
@@ -63,16 +63,22 @@
 
 @media (min-width: $min-desktop-width) {
   .photo-flow {
-    @include padding-lr ($padding-desktop);
+    @include wrapper-flex;
+  }
+
+  .photo-flow__wrapper {
+    // width: $desktop-width;
+    @include padding-lr (10.8%);
   }
 
   .photo-flow__item {
-    width: 300px; /*20px между карточками*/
+    flex-basis: 31.88%; /*20px между карточками*/
     min-height: 555px;
     margin-right: 20px;
 
     &.post--panorama {
-      width: $desktop-width - $padding-desktop * 2;
+      flex-basis: 100%;
+      // width: $desktop-width - 10% * 2;
     }
 
     &:first-child {

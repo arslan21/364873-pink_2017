@@ -1,5 +1,5 @@
 .price {
-  @include padding-lr (20px);
+  @include padding-lr (6.25%);
   padding-top: 60px;
   padding-bottom: 50px;
   margin-bottom: 50px;
@@ -23,17 +23,24 @@
 }
 
 @media (min-width: $tablet-width) {
+  .price {
+    @include padding-lr (3.33%);
+  }
+
   .price__wrapper {
-    width: $tablet-width - 20px -20px;
+    width: 100%;
   }
 }
 
 @media (min-width: $min-desktop-width) {
   .price {
-    @include padding-lr ($padding-desktop);
+    @include wrapper-flex;
+    flex-wrap: wrap;
+    @include padding-lr (10.8%);
+    // @include padding-lr ($padding-desktop);
   }
 
   .price__wrapper {
-    width: $desktop-width - $padding-desktop - $padding-desktop;
+    width: 100%;
   }
 }

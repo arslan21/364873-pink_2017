@@ -1,8 +1,8 @@
 .advantages {
-  @include padding-lr (34px);
+  @include list-style-none;
+  @include padding-lr (10%);
   padding-bottom: 30px;
 
-  @include list-style-none;
   background-color: $card-color;
 }
 

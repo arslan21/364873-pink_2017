@@ -10,12 +10,20 @@
   @include visualy-hidden;
 }
 
+.reviews__wrapper {
+  overflow: hidden;
+}
+
 .reviews__list {
   @include list-style-none;
+  @include flex (row, center, stretch, nowrap);
+  width: 300%;
+
 }
 
 .reviews__quote {
   @include zero-indent;
+  @include padding-lr (10%);
 }
 
 .reviews__toggles {
@@ -27,10 +35,6 @@
     overflow: hidden;
   }
 
-  .reviews__list {
-    @include flex (row, center, stretch, nowrap);
-    width: 300%;
-  }
 }
 
 @media (min-width: $min-desktop-width) {

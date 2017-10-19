@@ -2,9 +2,14 @@
   background-color: $card-color;
 }
 
-.post a {
+.post .post__link {
   @include link-decoration;
   display: block;
+  overflow: hidden;
+}
+
+.post--panorama .post__link {
+  overflow: visible;
 }
 
 .post__review {
@@ -12,7 +17,7 @@
 }
 
 .post__wrapper {
-  @include padding-lr (18px);
+  @include padding-lr (5.63%);
 }
 
 .post__likes,
@@ -34,13 +39,12 @@
 }
 
 .post__image {
-  @include size ($mobile-width - $padding-photo-flow - $padding-photo-flow, 180px);
+  @include size (100%, 180px);
   object-fit: cover;
 
   &--panorama {
-    @include size ($mobile-width, 137px);
-
-    transform: translateX(0 - $padding-photo-flow);
+    @include size (118%, 137px);
+    transform: translateX(0 - 6.25%);
   }
 }
 //
@@ -66,21 +70,23 @@
   }
 
   .post__image {
-    @include size (300px, 300px);
+    @include size (100%, 300px);
 
     &--panorama {
-      @include size ($tablet-width, 509px);
+      @include size (106.5%, 509px);
+      transform: translateX(0 - 3%);
+      object-fit: cover;
     }
   }
 }
 
 @media (min-width: $min-desktop-width) {
   .post__image {
-    @include size (300px, 400px);
+    @include size (100%, 400px);
 
     &--panorama {
-      @include size ($desktop-width, 506px);
-      transform: translateX(0 - $padding-desktop);
+      @include size (127.6%, 506px);
+      transform: translateX(0 - 10.8%);
     }
   }
 }

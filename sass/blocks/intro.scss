@@ -1,7 +1,7 @@
 .intro {
   position: relative;
 
-  @include min-size (320px, 171px);
+  @include min-size (100%, 171px);
   padding-top: 30px;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -21,6 +21,11 @@
   }
 }
 
+.intro__image {
+  margin: 0 auto;
+  transform: translateX(-37px);
+}
+
 .intro__slogan {
   display: none;
 
@@ -31,16 +36,16 @@
   .intro {
     display: block;
     padding-top: 45px;
-
-    @include min-size ($tablet-width, 330px);
+    min-height: 330px;
+    // @include min-size ($tablet-width, 330px);
     background-image: url("../img/back-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: 50% -110px;
 
     &--main {
       background-image: url("../img/back-tablet@1x.jpg");
-
-      @include min-size ($tablet-width, 619px);
+      min-height: 619px;
+      // @include min-size ($tablet-width, 619px);
       padding-top: 100px;
 
       @include flex (column, center, stretch, wrap);
@@ -60,29 +65,34 @@
 
   .intro__image {
     position: absolute;
-    left: 0%;
+    left: 33%;
     bottom: 0%;
 
     @include size (480px, 550px);
-    transform: translate(33%);
+    // margin: 0 auto;
+    // transform: translate(37px);
   }
 }
 
 @media (min-width: $min-desktop-width) {
   .intro {
-    @include min-size ($desktop-width, 286px);
+    min-height: 286px;
+    // @include min-size ($desktop-width, 286px);
     background-image: url("../img/back-desktop.jpg");
     background-repeat: no-repeat;
     background-position: 50% -110px;
 
     &--main {
-      @include min-size ($desktop-width, 743px);
+      min-height: 743px;
+      // @include min-size ($desktop-width, 743px);
       @include padding-lr (109px);
       padding-top: 110px;
     }
   }
 
   .intro__image {
+    left: 40%;
+
     @include size (700px, 640px);
   }
 

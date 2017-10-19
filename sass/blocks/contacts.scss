@@ -16,11 +16,9 @@
 .contacts__adress {
   display: block;
   margin-top: 10px;
-}
-
-.adress {
-  @include font($font-size-big, 30px, 300, $contacts-font-color);
   background-color: $page-color;
+
+  @include font($font-size-big, 30px, 300, $contacts-font-color);
 }
 
 .contacts__phone,
@@ -41,13 +39,13 @@
     display: flex;
   }
 
-  .contacts__text {
-    @include font(40px, 30px, 300, $main-font-color);
-  }
-
   .contacts__wrapper {
     @include flex (row, center, center, wrap);
     width: 100%;
+  }
+
+  .contacts__text {
+    @include font(40px, 30px, 300, $main-font-color);
   }
 
   .contacts__question {
@@ -62,6 +60,14 @@
 }
 
 @media (min-width: $min-desktop-width) {
+  .contacts {
+    @include wrapper-flex;
+  }
+
+  .contacts__wrapper {
+    width: $desktop-width;
+  }
+
   .contacts__text {
     @include font(50px, 30px, 400, $main-font-color);
   }

@@ -23,7 +23,7 @@
 .form__your-app,
 .form__description {
   @include flex (column, flex-start, flex-start, nowrap);
-  @include padding-lr (22px);
+  @include padding-lr (8%);
   padding-bottom: 44px;
   text-align: left;
   border: none;
@@ -36,7 +36,7 @@
 
 .form__input-text {
   @include font($font-size-medium, 30px, 400, $main-font-color);
-  @include size (276px, 59px);
+  @include size (86.2vw, 59px);
   @include padding-lr (20px);
 }
 
@@ -67,7 +67,7 @@
 }
 
 .form__textarea {
-  @include size (276px, 197px);
+  @include size (86.2vw, 197px);
   margin-top: 19px;
 
   @include font($font-size-medium, 30px, 400, $main-font-color);
@@ -195,6 +195,11 @@
     padding: 20px;
   }
 
+  .form__sent {
+    @include flex (row,space-between, baseline, wrap);
+    width: 100%;
+  }
+
   .form__button {
     @include margin-tb (20px);
     margin-left: 0;
@@ -210,6 +215,7 @@
 @media (min-width: $min-desktop-width) {
   .form {
     @include flex (row, space-between, baseline, wrap);
+    width: 100%;
   }
 
   .form__name,
@@ -217,7 +223,8 @@
   .form__contacts,
   .form__your-app,
   .form__description {
-    min-width: 431px;
+    // min-width: 431px;
+    flex-basis: 45.75%;
   }
 
   .form__name,
@@ -250,6 +257,10 @@
   .form__name .form__label-text {
     @include flex (row, space-between, baseline, nowrap);
     width: 100%;
+  }
+
+  .form__name .form__input-text {
+    width: 276px;
   }
 
   .form__textarea {

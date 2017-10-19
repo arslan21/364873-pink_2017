@@ -1,6 +1,7 @@
 .tariff {
   @include padding-lr (13px);
   padding-top: 10px;
+  text-align: left;
 }
 
 .tariff .tariff__name {
@@ -16,6 +17,7 @@
   width: 100%;
 
   @include font($font-size-medium, 30px, 700, $contrast-font-color);
+  text-align: center;
 }
 
 .tariff__price {

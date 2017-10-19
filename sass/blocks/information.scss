@@ -7,9 +7,9 @@
 }
 
 @media (min-width: $tablet-width) {
-  .information {
+  .information__wrapper {
     @include flex (row, space-between, stretch, wrap);
-    @include padding-lr (35px);
+    @include padding-lr (3.33%);
   }
 
   .information__image {
@@ -19,9 +19,14 @@
 
 @media (min-width: $min-desktop-width) {
   .information {
+    @include flex (row, center, stretch, nowrap);
+  }
+
+  .information__wrapper {
     @include flex (column, flex-start, stretch, nowrap);
     @include padding-lr ($padding-desktop);
     @include min-size ($desktop-width, 610px);
+    background-color: $card-color;
   }
 
   .information__image {

@@ -1,4 +1,4 @@
-.contest {
+.contest__wrapper {
   z-index: 3;
   margin-top: -14px;
   margin-bottom: 30px;
@@ -11,16 +11,23 @@
 }
 
 @media (min-width: $tablet-width) {
-  .contest {
-    @include padding-lr (22px);
+  .contest__wrapper {
+    @include padding-lr (3.33%);
     padding-top: 0;
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $min-desktop-width) {
   .contest {
-    @include padding-lr ($padding-desktop);
+    @include wrapper-flex;
     padding-top: 0;
     margin-bottom: 0;
+  }
+
+  .contest__wrapper {
+    @include padding-lr (10.8%);
+    padding-top: 0;
+    margin-bottom: 0;
+    width: 100%;
   }
 }

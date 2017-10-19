@@ -1,7 +1,8 @@
 .upload {
-  @include padding-lr ($padding-photo-flow);
+  @include padding-lr (6.25%);
   padding-top: 20px;
   background-color: $card-color;
+  @include wrapper-flex;
 }
 
 .upload__tittle {
@@ -40,7 +41,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .upload {
+  .upload__wrapper {
     padding-top: 57px;
     padding-bottom: 54px;
 
@@ -65,7 +66,7 @@
 }
 
 @media (min-width: $min-desktop-width) {
-  .upload {
+  .upload__wrapper {
     @include margin-lr ($padding-desktop);
     @include padding-tb (57px);
     @include padding-lr (80px);

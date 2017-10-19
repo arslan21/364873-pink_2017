@@ -1,6 +1,5 @@
 .design {
-  display: flex;
-  align-items: center;
+  @include flex (row, center, center, wrap);
 }
 
 .design__text {

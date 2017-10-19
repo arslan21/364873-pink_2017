@@ -2,7 +2,7 @@
   @include padding-lr (20px);
   padding-top: 28px;
   padding-bottom: 20px;
-  width: $mobile-width;
+  width: 100%;
   background-color: #1d2531;
 }
 
@@ -22,12 +22,18 @@
 //}
 
 .get__text {
+  @include padding-lr (8%);
   @include font($font-size-normal, 24px, 300, $contrast-font-color);
 }
 
-@media (min-width: 660px) {
+@media (min-width: $tablet-width) {
   .get {
+    width: 320px;
     z-index: 2;
     background-color: transparent;
+  }
+
+  .get__text {
+    @include padding-lr (20px);
   }
 }

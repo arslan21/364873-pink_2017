@@ -1,11 +1,11 @@
-.effect {
+.effect__wrapper {
   display: none;
   margin-top: 60px;
   background-color: $page-color;
 }
 
 @media (min-width: $tablet-width) {
-  .effect {
+  .effect__wrapper {
     @include flex (row, flex-start, stretch, wrap);
     @include min-size (100%, 222px);
 
@@ -40,7 +40,11 @@
 
 @media (min-width: $min-desktop-width) {
   .effect {
-    @include min-size (100%, 429px);
+    @include wrapper-flex;
+  }
+
+  .effect__wrapper {
+    @include min-size ($desktop-width, 429px);
 
     &::before {
       @include size (298px, 276px);
