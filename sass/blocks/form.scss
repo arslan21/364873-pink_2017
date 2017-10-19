@@ -7,11 +7,6 @@
   padding-top: 28px;
 }
 
-.form__name .form__text,
-.form__contacts .form__text {
-  display: none;
-}
-
 .form__achievements > *,
 .form__your-app > * {
   padding-top: 40px;
@@ -26,18 +21,27 @@
   @include padding-lr (8%);
   padding-bottom: 44px;
   text-align: left;
-  border: none;
 }
 
 .form__label-text {
+  @include flex (row, space-between, center, wrap);
+  width: 100%;
+
   @include font($font-size-normal, 30px, 400, $contacts-font-color);
   text-transform: uppercase;
 }
 
 .form__input-text {
-  @include font($font-size-medium, 30px, 400, $main-font-color);
-  @include size (86.2vw, 59px);
+  width: 100%;
+  flex-grow: 1;
+  height: 59px;
   @include padding-lr (20px);
+  @include font($font-size-medium, 30px, 400, $main-font-color);
+}
+//
+.form__name .form__text,
+.form__contacts .form__text {
+  display: none;
 }
 
 .form__text {
@@ -67,7 +71,7 @@
 }
 
 .form__textarea {
-  @include size (86.2vw, 197px);
+  @include size (100%, 197px);
   margin-top: 19px;
 
   @include font($font-size-medium, 30px, 400, $main-font-color);
@@ -90,16 +94,6 @@
     @include flex (row, center, baseline, wrap);
   }
 
-  .form__name .form__label-text {
-    @include flex (row, space-between, baseline, nowrap);
-    width: $tablet-width - 4px - $padding-form * 2;
-  }
-
-  .form__name .form__input-text {
-    margin-left: 20px;
-    flex-grow: 2;
-  }
-
   .form__name,
   .form__achievements,
   .form__contacts,
@@ -108,7 +102,7 @@
     @include padding-lr (0);
     @include padding-tb (0);
     margin-bottom: 50px;
-    min-width: $tablet-width - $padding-form *2;
+    min-width: 100%;
     background-color: $page-color;
   }
 
@@ -119,7 +113,6 @@
     position: relative;
 
     @include padding-tb (50px);
-    // min-width: $tablet-width - $padding-form - $padding-form;
     border: 2px solid #e5e5e5;
 
     & .form__text {
@@ -147,6 +140,15 @@
     order: -8;
   }
 
+  .form__label-text {
+    flex-wrap: nowrap;
+  }
+
+  .form__input-text {
+    max-width: 100%;
+    margin-left: 20px;
+  }
+
   .form__label-radio {
     @include padding-lr ($margin-form);
     margin-bottom: 37px;
@@ -163,16 +165,17 @@
 
   .form__contacts .form__label-text {
     @include flex (column, flex-start, flex-start, nowrap);
-    width: $tablet-width - $margin-form * 2 -$padding-form * 2 - 4px;
+    width: 80%;
     margin: 0 auto;
     padding-top: 0;
     margin-bottom: 37px;
   }
-
+//
   .form__contacts .form__input-text {
-    width: $tablet-width - $margin-form * 2 -$padding-form * 2 - 4px;
-    margin-bottom: 16px;
     order: -1;
+    width: 100%;
+    margin-bottom: 16px;
+    margin-left: 0;
   }
 
   .form__label-checkbox {
@@ -191,24 +194,22 @@
 
   .form__textarea {
     @include margin-lr ($margin-form);
-    @include min-size ($tablet-width - $margin-form * 2 -$padding-form * 2 - 4px, 189px);
+    @include min-size (80%, 189px);
     padding: 20px;
   }
 
   .form__sent {
-    @include flex (row,space-between, baseline, wrap);
+    @include flex (row, space-between, baseline, wrap);
     width: 100%;
   }
 
   .form__button {
     @include margin-tb (20px);
     margin-left: 0;
-    margin-right: auto;
   }
 
   .form__small {
     margin-right: 0;
-    margin-left: auto;
   }
 }
 
@@ -217,56 +218,56 @@
     @include flex (row, space-between, baseline, wrap);
     width: 100%;
   }
-
+//
   .form__name,
   .form__achievements,
   .form__contacts,
   .form__your-app,
   .form__description {
-    // min-width: 431px;
-    flex-basis: 45.75%;
+    min-width: 45.95%;
   }
 
   .form__name,
   .form__your-app {
-    // flex-shrink: 2;
+    flex-shrink: 2;
   }
 
   .form__contacts {
-    @include flex (row, flex-start, flex-start, nowrap);
+    @include flex (row, space-between, flex-start, wrap);
     padding-top: 44px;
     margin-bottom: 37px;
   }
 
   .form__contacts .form__label-text {
     @include flex (column, flex-start, flex-start, nowrap);
-    @include margin-lr ($margin-form);
-    width: 371px;
-  }
-
-  .form__contacts .form__input-text {
-    width: 100%;
+    width: 39.46%;
   }
 
   .form__achievements,
   .form__contacts,
   .form__description {
-    min-width: $desktop-width - $padding-desktop * 2;
+    min-width: 100%;
   }
 
-  .form__name .form__label-text {
-    @include flex (row, space-between, baseline, nowrap);
-    width: 100%;
+  .form__achievements {
+    @include flex (row, flex-start, center, wrap);
   }
 
-  .form__name .form__input-text {
-    width: 276px;
+  .form__label-checkbox {
+    width: 20.8%;
+    @include padding-lr (0);
+    margin-left: 9.38%;
+    margin-right: 0;
+
+    &:nth-of-type(3n) {
+      margin-right: 9.38%;
+    }
   }
 
   .form__textarea {
-    @include min-size ($desktop-width - $margin-form * 2 -$padding-desktop * 2 - 4px, 124px);
+    @include min-size (86.8%, 124px);
   }
-
+//
   .form__button,
   .form__small {
     margin-bottom: 0;
