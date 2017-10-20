@@ -1,11 +1,11 @@
 .intro {
   position: relative;
 
-  @include min-size (100%, 171px);
-  padding-top: 30px;
+  @include min-size (100%, 237px);
+  padding-top: 96px;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 50% -66px;
+  background-position: 50% 0;
 
   &--main {
     @include flex (column, flex-end, stretch, nowrap);
@@ -35,18 +35,19 @@
 @media (min-width: $tablet-width) {
   .intro {
     display: block;
-    padding-top: 45px;
-    min-height: 330px;
+    padding-top: 150px;
+    min-height: 440px;
+    // padding-top: 110px;
     // @include min-size ($tablet-width, 330px);
     background-image: url("../img/back-tablet@1x.jpg");
     background-repeat: no-repeat;
-    background-position: 50% -110px;
+    background-position: 50% 0;
 
     &--main {
       background-image: url("../img/back-tablet@1x.jpg");
-      min-height: 619px;
+      min-height: 729px;
       // @include min-size ($tablet-width, 619px);
-      padding-top: 100px;
+      padding-top: 219px;
 
       @include flex (column, center, stretch, wrap);
     }
@@ -76,22 +77,22 @@
 
 @media (min-width: $min-desktop-width) {
   .intro {
-    min-height: 286px;
+    min-height: 396px;
     // @include min-size ($desktop-width, 286px);
     background-image: url("../img/back-desktop.jpg");
     background-repeat: no-repeat;
-    background-position: 50% -110px;
+    background-position: 50% 0px;
 
     &--main {
-      min-height: 743px;
+      min-height: 853px;
       // @include min-size ($desktop-width, 743px);
       @include padding-lr (109px);
-      padding-top: 110px;
+      padding-top: 200px;
     }
   }
 
   .intro__image {
-    left: 40%;
+    left: 30%;
 
     @include size (700px, 640px);
   }

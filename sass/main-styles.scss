@@ -3,7 +3,7 @@ html,
   font-family: "Open Sans", "Arial", sans-serif;
   box-sizing: border-box;
   margin: 0 auto;
-  width: 100%;
+  min-width: 320px;
   max-width: 2560px;
 
   @include font($font-size-normal, 18px, 300, $main-font-color);
@@ -23,6 +23,7 @@ html,
 @media (min-width: $tablet-width) {
   html,
   .body {
+    min-width: 660px;
     // width: $tablet-width;
   }
 }
@@ -30,6 +31,7 @@ html,
 @media (min-width: $min-desktop-width) {
   html,
   .body {
+    min-width: 960px;
     // width: $desktop-width;
   }
 }
