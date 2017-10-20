@@ -1,57 +1,44 @@
 .page-header {
-  background-color: $menu-main-color;
-  // margin-bottom: -100px;
-  // z-index: 10;
-  // opacity: 0.99;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  margin-bottom: -66px;
 }
 
 .page-header__logo {
+  display: block;
+
+  @include size (75px, 69px);
+  @include padding-tb (23px);
+
   @include link-decoration;
+  background-color: transparent;
 }
 
-.page-header__logo-image {
-  margin-top: 22px;
-  margin-bottom: 25px;
-  margin-left: 20px;
+.page-header__logo:hover {
+  path {
+    fill: rgba(210, 40, 86, 1);
+  }
 }
 
-.page-header__toggle {
-  @include visualy-hidden;
-  margin-right: 20px;
-  margin-top: 22px;
-  margin-bottom: 25px;
+.page-header__logo:active {
+  path {
+    fill: rgba(210, 40, 86, 0.3);
+  }
 }
 
 @media (min-width: $tablet-width) {
+  .page-header {
+    margin-bottom: -109px;
+  }
+
   .page-header__logo {
     display: block;
     position: relative;
-    height: 109px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 20px;
-      top: 27px;
-
-      @include size (147px, 40px);
-      background-image: url("../img/logo-pink-blue-mobile.svg");
-      background-repeat: no-repeat;
-    }
-  }
-
-  .page-header__logo-image {
-    // display: none;
-    @include visualy-hidden;
+    @include size (147px, 109px);
   }
 }
 
 @media (min-width: $min-desktop-width) {
-  .page-header {
-    @include flex (row, center, center, nowrap);
-    @include min-size (100%, 110px);
-    // background-color: transparent;
-    // background-color: transparentize($menu-main-color, 0.3);
-    opacity: 0.3;
-  }
+
 }
